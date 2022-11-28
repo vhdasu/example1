@@ -41,7 +41,7 @@ function App() {
 
   return (
      <div>
-      <h1>Hello World!</h1>
+      <h1>Hello World Dhruti!</h1>
       <p>Version 2amplify </p>
       <button onClick={fetchTodos}>Fetch Todo</button>
       <button onClick={createTodo}>Create Todo</button>
