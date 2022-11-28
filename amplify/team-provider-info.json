@@ -14,6 +14,9 @@
     "categories": {
       "api": {
         "example1": {}
+      },
+      "auth": {
+        "example158d64e4d": {}
       }
     }
   }

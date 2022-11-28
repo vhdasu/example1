@@ -1,8 +1,10 @@
 
-import './App.css';
+//import './App.css';
 import {API} from 'aws-amplify'
 import * as queries from './graphql/queries'
 import * as mutations from './graphql/mutations'
+import {withAuthenticator} from '@aws-amplify/ui-react'
+import '@aws-amplify/ui-react/styles.css';
 
 function App() {
 
@@ -47,4 +49,4 @@ function App() {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
