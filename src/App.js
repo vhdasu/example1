@@ -1,10 +1,13 @@
 
 //import './App.css';
-import {API} from 'aws-amplify'
+import {API, Auth} from 'aws-amplify'
 import * as queries from './graphql/queries'
 import * as mutations from './graphql/mutations'
 import {withAuthenticator} from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css';
+import Header from "./Components/Header/Header"
+import Content from "./Components/Content/Content.js"
+import Sidebar from "./Components/Sidebar/Sidebar.js"
 
 function App() {
 
@@ -38,14 +41,30 @@ function App() {
 
   }
 
+  async function getUser(){
 
+    Auth.currentAuthenticatedUser()
+    .then(user => {
+      console.log(user);
+      return user.username;
+    })
+     
+}
+
+  
   return (
      <div>
-      <h1>Hello World Dhruti!</h1>
-      <p>Version 2amplify </p>
+      
+      <Header title="We Do" subtitle="A place to search for excellence" />
+      <Content message=""/>
+      <Sidebar message="Prize Info"/>
+
+      {/* <h1>Hello World Dhruti!</h1>
       <button onClick={fetchTodos}>Fetch Todo</button>
-      <button onClick={createTodo}>Create Todo</button>
+      <button onClick={createTodo}>Create Todo</button> */}
+
      </div>
+     
   );
 };
 

@@ -1,0 +1,10 @@
+.sidebar {
+    position: absolute;
+    top: 12.25%;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    background-color: lightskyblue;
+    color: white;
+  }

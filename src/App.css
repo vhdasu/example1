@@ -14,9 +14,21 @@ header a {
   color: #ffffff;
 }
 
+h10 {
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+
 h2, h3 {
   text-transform: uppercase;
 }
+
+h4 {
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+
 
 a {
   text-decoration: none;
