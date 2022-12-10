@@ -19,7 +19,7 @@ export default function Points(props) {
       <div className="points">
 
         {/* <button onClick={getUser}>getUser</button>         */}
-        <h4>Total Points: 10 for {getUser()}</h4>
+        <h4>Total Points: 10</h4>
         <h4>Upcoming Events</h4>
         
       </div>

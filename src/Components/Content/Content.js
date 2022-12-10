@@ -4,10 +4,7 @@ import "./Content.css";
 import {withAuthenticator} from '@aws-amplify/ui-react'
 import Points from "../Content/Points/Points"
 
-async function getUser(){
 
-     console.log(Auth.currentAuthenticatedUser().username);     
-}
 
 
 export default function Content(props) {
