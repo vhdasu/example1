@@ -1,9 +1,9 @@
-.points {
+.welcome {
     position: relative;
-    top: 40px;
-    left: 20%;
-    width: 60%;
-    height:10%;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height:100%;
     text-align: center;
     background-color: lightblue;
     color: whitesmoke;
@@ -13,4 +13,3 @@
     font-size:xx-large;
     text-transform: uppercase;
   }
-  

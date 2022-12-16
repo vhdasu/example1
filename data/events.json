@@ -1,0 +1,12 @@
+ [
+    {
+      "eventid": 1,
+      "eventname": "Science Fair",
+      "points": 10
+    },
+    {
+      "eventid": 2,
+      "eventname": "Robotics",
+      "points": 12
+    }
+  ]
