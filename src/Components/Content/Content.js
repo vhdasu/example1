@@ -13,7 +13,7 @@ export default function Content(props) {
     return (
       <div className="content">
         <Welcome/>
-        <Points/>        
+        {/* <Points/>         */}
         <MyEvents/>       
       </div>
     );

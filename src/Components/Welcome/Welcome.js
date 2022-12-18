@@ -11,19 +11,19 @@ class Welcome extends PureComponent {
     }
 
      
+    async componentDidMount() {
+
+        let mes = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
+
+        console.log(mes);
+
+        this.setState({
+            message: mes
+        })
+
+      }
+
     
-
-   async clickHandler()
-   {
-    let mes = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
-
-
-    console.log(mes);
-
-    this.setState({
-        message: mes
-    })
-   }
      
 
     render() {
@@ -32,10 +32,7 @@ class Welcome extends PureComponent {
            <div className="welcome">
                          
             <h4>Welcome {this.state.message}</h4>
-            {/* <h4>{this.clickHandler.bind(this)}</h4>
-            <h4>Welcome {this.state.message}</h4> */}
-         
-            <button onClick = {this.clickHandler.bind(this)}>Hello</button>
+ 
             </div>
         )
     }

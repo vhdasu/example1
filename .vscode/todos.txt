@@ -1,0 +1,1 @@
+improve flow of getting total points and a given student events

@@ -1,4 +1,4 @@
-import {API} from 'aws-amplify'
+import {API, Auth} from 'aws-amplify'
 import React, { PureComponent } from 'react'
 import Form from "./Form";
 import "./MyEvents.css";
@@ -25,30 +25,62 @@ class MyEvents extends PureComponent {
   }
 
   componentDidMount() {
-    //this.getEvents();
-    this.fetchTodos()
-
-    //this.setState({ events: response })
+    this.getUser()
+    this.fetchStudents()
   }
 
+  async getUser() {
+
+    let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
+
+    console.log(user);
+
+    this.setState({
+        message: user
+    })
+
+  }
+
+
+  async fetchStudents(){
+
+    let response1 = await API.graphql({
+       query:queries.listStudents
+
+   });
+
+  let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
+  console.log(user);  
+
+  let thisuserid = response1.data.listStudents.items.filter( function(item){return (item.name == user);} )[0].id;
+
+  let studentevents = await API.graphql({
+    query:queries.listStudentEvents
+  });
+
+  let allevents = await API.graphql({
+    query:queries.listEvents
+  });
+
+  let thisstudentevents = studentevents.data.listStudentEvents.items.filter( function(item){return (item.studentid == thisuserid);} );
+  console.log(thisstudentevents);  
+
+   const relevantevents  = [];
+  thisstudentevents.forEach((event) => {
+
+    let event1 = allevents.data.listEvents.items.filter( function(item){return (item.eventcode == event.eventcode);} );
+    relevantevents.push(event1[0]);
+   });
+
+   console.log(relevantevents);
+   this.setState({events: relevantevents});
+   const sum = relevantevents.reduce((acc, o) => acc + parseInt(o.eventpoints), 0)
+   this.setState({totalpoints: sum})
+ 
+  }
  
 
-  getEvents() {
-    //fetch("https://jsonplaceholder.typicode.com/users")
-    //fetch("../../../../data/events.json")
-    fetch('../../../../data/people.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }
-    )
-    //fetch("../../../../data/people.json")
-      .then(response => response.json())
-      .then(response => this.setState({ events: response }))
-      .catch(error => console.log(error));
-  }
+
 
   deleteEvent(eventid) {
     return () => {
@@ -58,31 +90,18 @@ class MyEvents extends PureComponent {
     };
   }
 
-  async fetchTodos(){
-
-     let response1 = await API.graphql({
-        query:queries.listTodos
-
-    });
-
-    this.setState({events: response1.data.listTodos.items});
-  
-    console.log(response1.data.listTodos.items[0]);     
-
-  }
-
-
   render() {
     console.log(this.state);
 
     return (
       <div className="myevents">
+        <h4>Total Points: {this.state.totalpoints}</h4>
         <Form addEvent={this.addEvent} />
         <h4/>
         <table className = "myevents">
           <thead>
             <tr>
-              <th>Event Id</th>
+              <th>Event Code</th>
               <th>Event Name</th>
               <th>Points</th>
             </tr>
@@ -90,15 +109,10 @@ class MyEvents extends PureComponent {
           <tbody>
             {this.state.events.map((Event, index) => {
               return (
-                <tr key={Event.id}>
-                  <th>{index + 1}</th>
-                  <td>{Event.name}</td>
-                  <td>{Event.description}</td>
-                  {/* <td>
-                    <button onClick={this.deleteEvent(Event.email)}>
-                      Delete
-                    </button>
-                  </td> */}
+                <tr key={Event.eventcode}>
+                  <td>{Event.eventcode}</td>
+                  <td>{Event.eventname}</td>
+                  <td>{Event.eventpoints}</td>                   
                 </tr>
               );
             })}

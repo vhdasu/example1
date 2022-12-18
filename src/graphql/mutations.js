@@ -43,3 +43,129 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const createStudents = /* GraphQL */ `
+  mutation CreateStudents(
+    $input: CreateStudentsInput!
+    $condition: ModelStudentsConditionInput
+  ) {
+    createStudents(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateStudents = /* GraphQL */ `
+  mutation UpdateStudents(
+    $input: UpdateStudentsInput!
+    $condition: ModelStudentsConditionInput
+  ) {
+    updateStudents(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteStudents = /* GraphQL */ `
+  mutation DeleteStudents(
+    $input: DeleteStudentsInput!
+    $condition: ModelStudentsConditionInput
+  ) {
+    deleteStudents(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createEvents = /* GraphQL */ `
+  mutation CreateEvents(
+    $input: CreateEventsInput!
+    $condition: ModelEventsConditionInput
+  ) {
+    createEvents(input: $input, condition: $condition) {
+      id
+      eventname
+      eventcode
+      eventpoints
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateEvents = /* GraphQL */ `
+  mutation UpdateEvents(
+    $input: UpdateEventsInput!
+    $condition: ModelEventsConditionInput
+  ) {
+    updateEvents(input: $input, condition: $condition) {
+      id
+      eventname
+      eventcode
+      eventpoints
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteEvents = /* GraphQL */ `
+  mutation DeleteEvents(
+    $input: DeleteEventsInput!
+    $condition: ModelEventsConditionInput
+  ) {
+    deleteEvents(input: $input, condition: $condition) {
+      id
+      eventname
+      eventcode
+      eventpoints
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createStudentEvents = /* GraphQL */ `
+  mutation CreateStudentEvents(
+    $input: CreateStudentEventsInput!
+    $condition: ModelStudentEventsConditionInput
+  ) {
+    createStudentEvents(input: $input, condition: $condition) {
+      id
+      studentid
+      eventcode
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateStudentEvents = /* GraphQL */ `
+  mutation UpdateStudentEvents(
+    $input: UpdateStudentEventsInput!
+    $condition: ModelStudentEventsConditionInput
+  ) {
+    updateStudentEvents(input: $input, condition: $condition) {
+      id
+      studentid
+      eventcode
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteStudentEvents = /* GraphQL */ `
+  mutation DeleteStudentEvents(
+    $input: DeleteStudentEventsInput!
+    $condition: ModelStudentEventsConditionInput
+  ) {
+    deleteStudentEvents(input: $input, condition: $condition) {
+      id
+      studentid
+      eventcode
+      createdAt
+      updatedAt
+    }
+  }
+`;

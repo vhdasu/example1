@@ -7,3 +7,21 @@ type Todo @model {
     name: String!
     description: String
 }
+
+type Students @model {
+    id: ID!
+    name: String!
+}
+
+type Events @model {
+    id: ID!
+    eventname: String!
+    eventcode: String!
+    eventpoints: Int!    
+}
+
+type StudentEvents @model {
+    id: ID!
+    studentid: ID!
+    eventcode: String!    
+}

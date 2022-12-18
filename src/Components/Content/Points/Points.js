@@ -12,7 +12,7 @@ export default function Points(props) {
       <div className="points">
 
         
-        <h4>Total Points: 10</h4>
+        {/* <h4>Total Points: 10</h4> */}
        
         
       </div>

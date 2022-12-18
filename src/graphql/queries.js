@@ -30,3 +30,90 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
+export const getStudents = /* GraphQL */ `
+  query GetStudents($id: ID!) {
+    getStudents(id: $id) {
+      id
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listStudents = /* GraphQL */ `
+  query ListStudents(
+    $filter: ModelStudentsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listStudents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getEvents = /* GraphQL */ `
+  query GetEvents($id: ID!) {
+    getEvents(id: $id) {
+      id
+      eventname
+      eventcode
+      eventpoints
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listEvents = /* GraphQL */ `
+  query ListEvents(
+    $filter: ModelEventsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        eventname
+        eventcode
+        eventpoints
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getStudentEvents = /* GraphQL */ `
+  query GetStudentEvents($id: ID!) {
+    getStudentEvents(id: $id) {
+      id
+      studentid
+      eventcode
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listStudentEvents = /* GraphQL */ `
+  query ListStudentEvents(
+    $filter: ModelStudentEventsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listStudentEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        studentid
+        eventcode
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
