@@ -13,3 +13,28 @@
     font-size:xx-large;
     text-transform: uppercase;
   } */
+
+  .mytable td{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width:50%;
+    height:30%;
+    text-align: center;
+    background-color: lightblue;
+    color: whitesmoke;
+    font-size:24px;
+  }
+
+  th{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width:50%;
+    height:30%;
+    text-align: center;
+    background-color: lightblue;
+    color: whitesmoke;
+    font-size:24px;
+  }
+

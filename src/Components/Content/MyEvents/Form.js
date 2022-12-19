@@ -9,9 +9,8 @@ class Form extends Component {
   formSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    const eventid = form.elements["eventid"].value;
-    const eventname = form.elements["eventname"].value;
-    this.props.addPerson(eventname, eventid);
+    const eventcode = form.elements["eventcode"].value;
+    this.props.addEvent(eventcode);
     form.reset();
   }
 
@@ -19,7 +18,7 @@ class Form extends Component {
     return (
       <form onSubmit={this.formSubmit}>
         <h4>Add an event</h4>
-        <input id="name" type="text" defaultValue="" placeholder="Event ID..." />
+        <input id="eventcode" type="text" defaultValue="" placeholder="Event Code..." />
         {/* <input id="email" type="text" defaultValue="" placeholder="Email..." /> */}
         <input  type="submit" value="submit" />
       </form>

@@ -56,7 +56,7 @@ function App() {
   return (
      <div>
       
-      <Header title="We Do" subtitle="A place to search for excellence" />
+      <Header title="Edventure" subtitle="A place to search for excellence" />
       <Content message=""/>
       <Sidebar message="Prize Info"/>
 
