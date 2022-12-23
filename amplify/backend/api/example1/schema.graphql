@@ -25,3 +25,8 @@ type StudentEvents @model {
     studentid: ID!
     eventcode: String!    
 }
+
+type Administrators @model {
+    id: ID!
+    administratorname: String!
+}

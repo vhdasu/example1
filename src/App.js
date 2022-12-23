@@ -1,72 +1,74 @@
-
-//import './App.css';
+ import {withAuthenticator} from '@aws-amplify/ui-react'
+import '@aws-amplify/ui-react/styles.css';
+import React, { PureComponent } from 'react'
 import {API, Auth} from 'aws-amplify'
 import * as queries from './graphql/queries'
-import * as mutations from './graphql/mutations'
-import {withAuthenticator} from '@aws-amplify/ui-react'
-import '@aws-amplify/ui-react/styles.css';
-import Header from "./Components/Header/Header"
-import Content from "./Components/Content/Content.js"
-import Sidebar from "./Components/Sidebar/Sidebar.js"
+import Administrator from './Components/Content/Administrator/Administrator';
+import Header from "./Components/Content/Header/Header.js"
+import Student from './Components/Content/Student/Student.js';
 
 
-function App() {
+class App extends PureComponent {
+  constructor(props) {
+      super(props)
 
-  async function createTodo()
-  {
-
-    let myTodo = {
-      name:"Todo Das",
-      description:"Das Description"
-    };
-
-    let response = await API.graphql({
-      query: mutations.createTodo,
-      variables: {
-        input: myTodo
+      this.state = {
+          message:'Hello'
       }
-    })
-
-    console.log(response);
   }
 
-  async function fetchTodos(){
+  componentDidMount() {
+    console.log("APP: Component did mount called");
+    this.isAdmnistrator();
+  }
 
-     
+  signOut = () => {
+    Auth.signOut()
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+  }
 
-    let response = await API.graphql({
-        query:queries.listTodos
 
+  async isAdmnistrator() {
+
+    console.log("APP: isAdministrator called");
+
+    let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
+    let alladministrators = await API.graphql({
+      query:queries.listAdministrators
     });
-    console.log(response);
 
+    console.log(alladministrators)
+
+    let isadministrator = (alladministrators.data.listAdministrators.items.filter( function(item){return (item.administratorname === user);} ).length ===1);    
+    this.setState({isAdministrator: isadministrator})
+    console.log(this.state.isAdministrator);    
   }
 
-  async function getUser(){
 
-    Auth.currentAuthenticatedUser()
-    .then(user => {
-      console.log(user);
-      return user.username;
-    })
-     
+  render() {
+
+    if(!this.state.isAdministrator)
+    {
+      return (
+            
+        <div>         
+          <Header message = "EDventure"/>         
+          <Student/>
+        </div>
+      );
+    }
+    else
+    {
+      return (            
+        <div>                      
+        <Header message = "EDventure"/>
+
+        </div>
+      );
+    }
+    }
 }
 
-  
-  return (
-     <div>
-      
-      <Header title="Edventure" subtitle="A place to search for excellence" />
-      <Content message=""/>
-      <Sidebar message="Prize Info"/>
-
-      {/* <h1>Hello World Dhruti!</h1>
-      <button onClick={fetchTodos}>Fetch Todo</button>
-      <button onClick={createTodo}>Create Todo</button> */}
-
-     </div>
-     
-  );
-};
-
 export default withAuthenticator(App);
+ 

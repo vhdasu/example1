@@ -7,7 +7,7 @@
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type SidebarProps = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type StudentPageProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Sidebar(props: SidebarProps): React.ReactElement;
+export default function StudentPage(props: StudentPageProps): React.ReactElement;

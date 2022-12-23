@@ -1,0 +1,131 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color:whitesmoke;
+    color: cadetblue;
+  }
+
+  .edventurelogo {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    height:110px;
+    width: 20px;
+     text-align: left;
+    background-color:whitesmoke;
+    color: cadetblue;    
+  }
+  .home {
+    position: absolute;
+    top: 120px;
+    left: 600px;
+    height:100px;
+    width: 20px;
+     text-align: left;
+    background-color:whitesmoke;
+    color: cadetblue;    
+    font-weight: bold;
+  }
+  
+  .homebutton {
+   
+    background-color:whitesmoke;
+    color: cadetblue;    
+    padding: 0;
+    border: none;
+    background: none;
+    cursor:pointer;
+  }
+ 
+
+
+.leaderboard {
+  position: absolute;
+  top: 120px;
+  left: 750px;
+  height:100px;
+  width: 500px;
+   text-align: left;
+  background-color:whitesmoke;
+  color: cadetblue;    
+  font-weight: bold;
+}
+.prizeinfo {
+  position: absolute;
+  top: 120px;
+  left: 970px;
+  height:100px;
+  width: 500px;
+   text-align: left;
+  background-color:whitesmoke;
+  color: cadetblue;   
+  font-weight: bold; 
+}
+.helpcontact {
+  position: absolute;
+  top: 120px;
+  left: 1220px;
+  height:100px;
+  width: 500px;
+   text-align: left;
+  background-color:whitesmoke;
+  color: cadetblue;    
+  font-weight: bold;
+}
+
+.signout {
+  position: absolute;
+  top: 120px;
+  left: 1420px;
+  height:100px;
+  width: 500px;
+   text-align: left;
+  background-color:whitesmoke;
+  color: cadetblue;    
+  font-weight: bold;
+}
+
+.signoutbutton {
+   
+  background-color:whitesmoke;
+  color: cadetblue;    
+  padding: 0;
+  border: none;
+  background: none;
+  cursor:pointer;
+}   
+
+.welcome {
+  position: absolute;
+  top: 30px;
+  left: 1400px;
+  height:40px;
+  width: 600px;
+   text-align: center;
+  background-color:whitesmoke;
+  color: orange;    
+}
+
+h9 {
+  font-family:"Josefin Sans";
+  font-size: 25px;     
+  font-weight: bold;
+}
+
+    h7 {
+      font-family:"Josefin Sans";
+      font-size: 20px;     
+    }
+   
+
+  h4 {
+    font-family:"Josefin Sans";
+    font-size: 50px;    
+    font-style: italic;
+  }
+ 

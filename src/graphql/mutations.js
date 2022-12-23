@@ -169,3 +169,42 @@ export const deleteStudentEvents = /* GraphQL */ `
     }
   }
 `;
+export const createAdministrators = /* GraphQL */ `
+  mutation CreateAdministrators(
+    $input: CreateAdministratorsInput!
+    $condition: ModelAdministratorsConditionInput
+  ) {
+    createAdministrators(input: $input, condition: $condition) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateAdministrators = /* GraphQL */ `
+  mutation UpdateAdministrators(
+    $input: UpdateAdministratorsInput!
+    $condition: ModelAdministratorsConditionInput
+  ) {
+    updateAdministrators(input: $input, condition: $condition) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteAdministrators = /* GraphQL */ `
+  mutation DeleteAdministrators(
+    $input: DeleteAdministratorsInput!
+    $condition: ModelAdministratorsConditionInput
+  ) {
+    deleteAdministrators(input: $input, condition: $condition) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;

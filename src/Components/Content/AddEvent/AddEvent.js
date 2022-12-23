@@ -14,8 +14,7 @@ class AddEvent extends PureComponent {
         return (
 
             <div className="addevent">
-                <h4>Add an event to portfolio</h4>
-                <h4><label for="EventID">Event ID: </label><input type="text" id="EventID1" name="EventID" placeholder="D326-234-1934"/></h4>
+                <h8>Add an event to portfolio</h8>
             </div>
            
         )

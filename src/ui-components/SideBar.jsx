@@ -7,998 +7,324 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Divider, Flex, Icon, Text, View } from "@aws-amplify/ui-react";
-export default function SideBar(props) {
+import { Icon, Text, View } from "@aws-amplify/ui-react";
+export default function Sidebar(props) {
   const { overrides, ...rest } = props;
   return (
-    <Flex
-      gap="10px"
-      direction="row"
-      width="385px"
-      height="762px"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+    <View
+      width="319px"
+      height="1036px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       position="relative"
-      padding="32px 0px 32px 0px"
-      backgroundColor="rgba(255,255,255,1)"
+      padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "SideBar")}
+      {...getOverrideProps(overrides, "Sidebar")}
     >
-      <Flex
-        gap="32px"
-        direction="column"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        grow="1"
-        shrink="1"
-        basis="0"
-        alignSelf="stretch"
-        position="relative"
+      <View
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 32129767087")}
+        width="319px"
+        height="1024px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="0px"
+        left="0px"
+        {...getOverrideProps(overrides, "Group 1")}
       >
-        <Flex
-          gap="32px"
+        <View
+          width="319px"
+          height="1024px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          position="absolute"
+          top="0%"
+          bottom="0%"
+          left="0%"
+          right="0%"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          border="1px SOLID rgba(0,0,0,1)"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(251,247,244,1)"
+          {...getOverrideProps(overrides, "RectangleBackground")}
+        ></View>
+        <Text
+          fontFamily="Poppins"
+          fontSize="50px"
+          fontWeight="500"
+          color="rgba(56,128,135,1)"
+          lineHeight="75px"
+          textAlign="center"
+          display="block"
           direction="column"
+          justifyContent="unset"
+          width="287px"
+          height="67px"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="25px"
+          left="0px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="EDventure"
+          {...getOverrideProps(overrides, "EDventure")}
+        ></Text>
+        <Text
+          fontFamily="Josefin Sans"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="20px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
           width="unset"
           height="unset"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          grow="1"
-          shrink="1"
-          basis="0"
-          alignSelf="stretch"
-          position="relative"
-          padding="0px 32px 0px 32px"
-          {...getOverrideProps(overrides, "Frame 32129767088")}
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="181px"
+          left="98px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Home"
+          {...getOverrideProps(overrides, "Home")}
+        ></Text>
+        <Text
+          fontFamily="Josefin Sans"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="20px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="257px"
+          left="93px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Leaderboard"
+          {...getOverrideProps(overrides, "Leaderboard")}
+        ></Text>
+        <Text
+          fontFamily="Josefin Sans"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="20px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="333px"
+          left="93px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Prize Information"
+          {...getOverrideProps(overrides, "Prize Information")}
+        ></Text>
+        <Text
+          fontFamily="Josefin Sans"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="20px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="409px"
+          left="93px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Account"
+          {...getOverrideProps(overrides, "Account")}
+        ></Text>
+        <Text
+          fontFamily="Josefin Sans"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="20px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="478px"
+          left="93px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Help/Contact"
+          {...getOverrideProps(overrides, "Help/Contact")}
+        ></Text>
+        <Text
+          fontFamily="Josefin Sans"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="20px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="959px"
+          left="87px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Logout"
+          {...getOverrideProps(overrides, "Logout1141512")}
+        ></Text>
+        <View
+          width="24px"
+          height="24px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          overflow="hidden"
+          position="absolute"
+          top="333px"
+          left="53px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "PrizeIcon")}
         >
-          <View
-            width="unset"
-            height="80px"
+          <Icon
+            width="16px"
+            height="21px"
+            viewBox={{
+              minX: 0,
+              minY: 0,
+              width: 16.001953125,
+              height: 21.00079345703125,
+            }}
+            paths={[
+              {
+                d: "M5.00108 8.00077C5.01144 7.20834 5.33084 6.45128 5.89122 5.8909C6.4516 5.33053 7.20866 5.01113 8.00108 5.00077C8.79351 5.01113 9.55057 5.33053 10.1109 5.8909C10.6713 6.45128 10.9907 7.20834 11.0011 8.00077C10.9907 8.7932 10.6713 9.55025 10.1109 10.1106C9.55057 10.671 8.79351 10.9904 8.00108 11.0008C7.20866 10.9904 6.4516 10.671 5.89122 10.1106C5.33084 9.55025 5.01144 8.7932 5.00108 8.00077ZM8.00108 17.0008L12.0011 18.0008L12.0011 14.9208C10.7948 15.6472 9.40911 16.0214 8.00108 16.0008C6.59306 16.0214 5.20741 15.6472 4.00108 14.9208L4.00108 18.0008M8.00108 2.00077C7.21305 1.98639 6.4304 2.13333 5.70125 2.43256C4.9721 2.73179 4.31185 3.17698 3.76108 3.74077C3.1912 4.29214 2.74085 4.95487 2.43807 5.68774C2.13529 6.42061 1.98654 7.20795 2.00108 8.00077C1.99066 8.78857 2.14141 9.57018 2.44407 10.2976C2.74673 11.025 3.19491 11.6829 3.76108 12.2308C4.30928 12.8 4.96838 13.2507 5.69765 13.5552C6.42693 13.8596 7.21089 14.0113 8.00108 14.0008C8.79128 14.0113 9.57524 13.8596 10.3045 13.5552C11.0338 13.2507 11.6929 12.8 12.2411 12.2308C12.8073 11.6829 13.2554 11.025 13.5581 10.2976C13.8608 9.57018 14.0115 8.78857 14.0011 8.00077C14.0156 7.20795 13.8669 6.42061 13.5641 5.68774C13.2613 4.95487 12.811 4.29214 12.2411 3.74077C11.6903 3.17698 11.0301 2.73179 10.3009 2.43256C9.57176 2.13333 8.78911 1.98639 8.00108 2.00077M16.0011 8.00077C15.9798 8.96065 15.7867 9.90896 15.4311 10.8008C15.1107 11.7082 14.6259 12.5489 14.0011 13.2808L14.0011 21.0008L8.00108 19.0008L2.00108 21.0008L2.00108 13.2808C0.706772 11.8272 -0.00541619 9.94705 0.00108301 8.00077C-0.0165419 6.95135 0.18112 5.90946 0.581865 4.93942C0.982611 3.96937 1.57793 3.09176 2.33108 2.36077C3.06479 1.60087 3.94645 0.999402 4.92165 0.593499C5.89684 0.187596 6.94489 -0.0141313 8.00108 0.00076919C9.05728 -0.0141313 10.1053 0.187596 11.0805 0.593499C12.0557 0.999402 12.9374 1.60087 13.6711 2.36077C14.4242 3.09176 15.0196 3.96937 15.4203 4.93942C15.821 5.90946 16.0187 6.95135 16.0011 8.00077L16.0011 8.00077Z",
+                fill: "rgba(167,167,167,1)",
+                fillRule: "nonzero",
+              },
+            ]}
             display="block"
             gap="unset"
             alignItems="unset"
             justifyContent="unset"
-            shrink="0"
-            alignSelf="stretch"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            backgroundColor="rgba(233,235,236,1)"
-            {...getOverrideProps(overrides, "Rectangle 1162")}
-          ></View>
-          <Flex
-            gap="16px"
-            direction="column"
-            width="unset"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 414")}
-          >
-            <Text
-              fontFamily="Inter"
-              fontSize="16px"
-              fontWeight="700"
-              color="rgba(13,26,38,1)"
-              lineHeight="24px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="ORGANIZATION"
-              {...getOverrideProps(overrides, "ORGANIZATION29767091")}
-            ></Text>
-            <Flex
-              gap="16px"
-              direction="row"
-              width="unset"
-              height="unset"
-              justifyContent="flex-start"
-              alignItems="center"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 32129767092")}
-            >
-              <View
-                width="24px"
-                height="24px"
-                display="block"
-                gap="unset"
-                alignItems="unset"
-                justifyContent="unset"
-                overflow="hidden"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Icon29767093")}
-              >
-                <Icon
-                  width="20px"
-                  height="17px"
-                  viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                  paths={[
-                    {
-                      d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                      fill: "rgba(13,26,38,1)",
-                      fillRule: "nonzero",
-                    },
-                  ]}
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  position="absolute"
-                  top="12.5%"
-                  bottom="16.67%"
-                  left="8.33%"
-                  right="8.33%"
-                  {...getOverrideProps(overrides, "Vector29767094")}
-                ></Icon>
-              </View>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color="rgba(13,26,38,1)"
-                lineHeight="24px"
-                textAlign="left"
-                display="block"
-                direction="column"
-                justifyContent="unset"
-                letterSpacing="0.01px"
-                width="unset"
-                height="unset"
-                gap="unset"
-                alignItems="unset"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Lorem Ipsum"
-                {...getOverrideProps(overrides, "Lorem Ipsum29767095")}
-              ></Text>
-            </Flex>
-            <Flex
-              gap="16px"
-              direction="row"
-              width="unset"
-              height="unset"
-              justifyContent="flex-start"
-              alignItems="center"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 322")}
-            >
-              <View
-                width="24px"
-                height="24px"
-                display="block"
-                gap="unset"
-                alignItems="unset"
-                justifyContent="unset"
-                overflow="hidden"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Icon29767097")}
-              >
-                <Icon
-                  width="20px"
-                  height="17px"
-                  viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                  paths={[
-                    {
-                      d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                      fill: "rgba(13,26,38,1)",
-                      fillRule: "nonzero",
-                    },
-                  ]}
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  position="absolute"
-                  top="12.5%"
-                  bottom="16.67%"
-                  left="8.33%"
-                  right="8.33%"
-                  {...getOverrideProps(overrides, "Vector29767098")}
-                ></Icon>
-              </View>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color="rgba(13,26,38,1)"
-                lineHeight="24px"
-                textAlign="left"
-                display="block"
-                direction="column"
-                justifyContent="unset"
-                letterSpacing="0.01px"
-                width="unset"
-                height="unset"
-                gap="unset"
-                alignItems="unset"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Lorem Ipsum"
-                {...getOverrideProps(overrides, "Lorem Ipsum29767099")}
-              ></Text>
-            </Flex>
-          </Flex>
-          <Flex
-            gap="16px"
-            direction="column"
-            width="unset"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 32129767100")}
-          >
-            <Text
-              fontFamily="Inter"
-              fontSize="16px"
-              fontWeight="700"
-              color="rgba(13,26,38,1)"
-              lineHeight="24px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="ORGANIZATION"
-              {...getOverrideProps(overrides, "ORGANIZATION29767101")}
-            ></Text>
-            <Flex
-              gap="16px"
-              direction="column"
-              width="unset"
-              height="unset"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 413")}
-            >
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 323")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767104")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767105")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767106")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 324")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767108")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767109")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767110")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 325")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767112")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767113")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767114")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 326")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767116")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767117")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767118")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 327")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767120")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767121")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767122")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 328")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767124")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767125")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767126")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 329")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767128")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767129")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767130")}
-                ></Text>
-              </Flex>
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 330")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  overflow="hidden"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon29767132")}
-                >
-                  <Icon
-                    width="20px"
-                    height="17px"
-                    viewBox={{ minX: 0, minY: 0, width: 20, height: 17 }}
-                    paths={[
-                      {
-                        d: "M10 2.69L15 7.19L15 15L13 15L13 9L7 9L7 15L5 15L5 7.19L10 2.69L10 2.69ZM10 0L0 9L3 9L3 17L9 17L9 11L11 11L11 17L17 17L17 9L20 9L10 0Z",
-                        fill: "rgba(13,26,38,1)",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="12.5%"
-                    bottom="16.67%"
-                    left="8.33%"
-                    right="8.33%"
-                    {...getOverrideProps(overrides, "Vector29767133")}
-                  ></Icon>
-                </View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767134")}
-                ></Text>
-              </Flex>
-            </Flex>
-          </Flex>
-        </Flex>
-        <Flex
-          gap="32px"
-          direction="column"
-          width="unset"
-          height="81px"
-          justifyContent="flex-end"
-          alignItems="flex-start"
-          shrink="0"
-          position="relative"
+            position="absolute"
+            top="8.33%"
+            bottom="4.17%"
+            left="16.66%"
+            right="16.66%"
+            {...getOverrideProps(overrides, "Vector114629")}
+          ></Icon>
+        </View>
+        <View
+          width="16.68px"
+          height="16.68px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          position="absolute"
+          top="181px"
+          left="58px"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 32129767135")}
+          {...getOverrideProps(overrides, "HomeIcon")}
         >
-          <Divider
-            width="385px"
-            shrink="0"
-            size="small"
-            orientation="horizontal"
-            {...getOverrideProps(overrides, "Divider")}
-          ></Divider>
-          <Flex
-            gap="129px"
-            direction="row"
-            width="385px"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="center"
-            shrink="0"
-            position="relative"
-            padding="0px 32px 0px 32px"
-            {...getOverrideProps(overrides, "Frame 416")}
+          <View
+            padding="0px 0px 0px 0px"
+            width="16.68px"
+            height="16.68px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            position="absolute"
+            top="0%"
+            bottom="0%"
+            left="0%"
+            right="0%"
+            transformOrigin="top left"
+            transform="rotate(0deg)"
+            {...getOverrideProps(overrides, "Iconly/Bold/Category")}
           >
-            <Flex
-              gap="16px"
-              direction="row"
-              width="unset"
-              height="unset"
-              justifyContent="flex-start"
-              alignItems="center"
-              grow="1"
-              shrink="1"
-              basis="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 415")}
-            >
-              <View
-                width="48px"
-                height="48px"
-                display="block"
-                gap="unset"
-                alignItems="unset"
-                justifyContent="unset"
-                shrink="0"
-                position="relative"
-                borderRadius="40px"
-                padding="0px 0px 0px 0px"
-                backgroundColor="rgba(196,196,196,1)"
-                {...getOverrideProps(overrides, "Rectangle 1163")}
-              ></View>
-              <Flex
-                gap="0"
-                direction="column"
-                width="100px"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="flex-start"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 32129767140")}
-              >
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  letterSpacing="0.01px"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  alignSelf="stretch"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767141")}
-                ></Text>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="14px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="block"
-                  direction="column"
-                  justifyContent="unset"
-                  width="unset"
-                  height="unset"
-                  gap="unset"
-                  alignItems="unset"
-                  shrink="0"
-                  alignSelf="stretch"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Lorem Ipsum"
-                  {...getOverrideProps(overrides, "Lorem Ipsum29767142")}
-                ></Text>
-              </Flex>
-            </Flex>
             <View
-              width="24px"
-              height="24px"
+              padding="0px 0px 0px 0px"
+              width="16.68px"
+              height="16.68px"
               display="block"
               gap="unset"
               alignItems="unset"
               justifyContent="unset"
-              overflow="hidden"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Icon/settings")}
+              position="absolute"
+              top="0%"
+              bottom="0%"
+              left="0%"
+              right="0%"
+              {...getOverrideProps(overrides, "Category")}
             >
               <Icon
-                width="19.45px"
-                height="20px"
-                viewBox={{ minX: 0, minY: 0, width: 19.4541015625, height: 20 }}
+                width="16.68px"
+                height="16.68px"
+                viewBox={{
+                  minX: 0,
+                  minY: 0,
+                  width: 16.67822265625,
+                  height: 16.677978515625,
+                }}
                 paths={[
                   {
-                    d: "M17.1593 10.98C17.1993 10.66 17.2293 10.34 17.2293 10C17.2293 9.66 17.1993 9.34 17.1593 9.02L19.2693 7.37C19.4593 7.22 19.5093 6.95 19.3893 6.73L17.3893 3.27C17.2993 3.11 17.1293 3.02 16.9493 3.02C16.8893 3.02 16.8293 3.03 16.7793 3.05L14.2893 4.05C13.7693 3.65 13.2093 3.32 12.5993 3.07L12.2193 0.42C12.1893 0.18 11.9793 0 11.7293 0L7.72933 0C7.47933 0 7.26933 0.18 7.23933 0.42L6.85933 3.07C6.24933 3.32 5.68933 3.66 5.16933 4.05L2.67933 3.05C2.61933 3.03 2.55933 3.02 2.49933 3.02C2.32933 3.02 2.15933 3.11 2.06933 3.27L0.0693316 6.73C-0.0606684 6.95 -0.000668302 7.22 0.189332 7.37L2.29933 9.02C2.25933 9.34 2.22933 9.67 2.22933 10C2.22933 10.33 2.25933 10.66 2.29933 10.98L0.189332 12.63C-0.000668302 12.78 -0.0506684 13.05 0.0693316 13.27L2.06933 16.73C2.15933 16.89 2.32933 16.98 2.50933 16.98C2.56933 16.98 2.62933 16.97 2.67933 16.95L5.16933 15.95C5.68933 16.35 6.24933 16.68 6.85933 16.93L7.23933 19.58C7.26933 19.82 7.47933 20 7.72933 20L11.7293 20C11.9793 20 12.1893 19.82 12.2193 19.58L12.5993 16.93C13.2093 16.68 13.7693 16.34 14.2893 15.95L16.7793 16.95C16.8393 16.97 16.8993 16.98 16.9593 16.98C17.1293 16.98 17.2993 16.89 17.3893 16.73L19.3893 13.27C19.5093 13.05 19.4593 12.78 19.2693 12.63L17.1593 10.98L17.1593 10.98ZM15.1793 9.27C15.2193 9.58 15.2293 9.79 15.2293 10C15.2293 10.21 15.2093 10.43 15.1793 10.73L15.0393 11.86L15.9293 12.56L17.0093 13.4L16.3093 14.61L15.0393 14.1L13.9993 13.68L13.0993 14.36C12.6693 14.68 12.2593 14.92 11.8493 15.09L10.7893 15.52L10.6293 16.65L10.4293 18L9.02933 18L8.83933 16.65L8.67933 15.52L7.61933 15.09C7.18933 14.91 6.78933 14.68 6.38933 14.38L5.47933 13.68L4.41933 14.11L3.14933 14.62L2.44933 13.41L3.52933 12.57L4.41933 11.87L4.27933 10.74C4.24933 10.43 4.22933 10.2 4.22933 10C4.22933 9.8 4.24933 9.57 4.27933 9.27L4.41933 8.14L3.52933 7.44L2.44933 6.6L3.14933 5.39L4.41933 5.9L5.45933 6.32L6.35933 5.64C6.78933 5.32 7.19933 5.08 7.60933 4.91L8.66933 4.48L8.82933 3.35L9.02933 2L10.4193 2L10.6093 3.35L10.7693 4.48L11.8293 4.91C12.2593 5.09 12.6593 5.32 13.0593 5.62L13.9693 6.32L15.0293 5.89L16.2993 5.38L16.9993 6.59L15.9293 7.44L15.0393 8.14L15.1793 9.27ZM9.72933 6C7.51933 6 5.72933 7.79 5.72933 10C5.72933 12.21 7.51933 14 9.72933 14C11.9393 14 13.7293 12.21 13.7293 10C13.7293 7.79 11.9393 6 9.72933 6ZM9.72933 12C8.62933 12 7.72933 11.1 7.72933 10C7.72933 8.9 8.62933 8 9.72933 8C10.8293 8 11.7293 8.9 11.7293 10C11.7293 11.1 10.8293 12 9.72933 12Z",
-                    fill: "rgba(13,26,38,1)",
+                    d: "M4.93676 9.56472C6.11257 9.56472 7.0549 10.5162 7.0549 11.7004L7.0549 14.5432C7.0549 15.719 6.11257 16.678 4.93676 16.678L2.11814 16.678C0.95066 16.678 0 15.719 0 14.5432L0 11.7004C0 10.5162 0.95066 9.56472 2.11814 9.56472L4.93676 9.56472ZM14.5602 9.56472C15.7277 9.56472 16.6783 10.5162 16.6783 11.7004L16.6783 14.5432C16.6783 15.719 15.7277 16.678 14.5602 16.678L11.7416 16.678C10.5657 16.678 9.62343 15.719 9.62343 14.5432L9.62343 11.7004C9.62343 10.5162 10.5657 9.56472 11.7416 9.56472L14.5602 9.56472ZM4.93676 0C6.11257 0 7.0549 0.958999 7.0549 2.13565L7.0549 4.97846C7.0549 6.16261 6.11257 7.11327 4.93676 7.11327L2.11814 7.11327C0.95066 7.11327 0 6.16261 0 4.97846L0 2.13565C0 0.958999 0.95066 0 2.11814 0L4.93676 0ZM14.5602 0C15.7277 0 16.6783 0.958999 16.6783 2.13565L16.6783 4.97846C16.6783 6.16261 15.7277 7.11327 14.5602 7.11327L11.7416 7.11327C10.5657 7.11327 9.62343 6.16261 9.62343 4.97846L9.62343 2.13565C9.62343 0.958999 10.5657 0 11.7416 0L14.5602 0Z",
+                    fill: "rgba(167,167,167,1)",
                     fillRule: "nonzero",
                   },
                 ]}
@@ -1007,16 +333,253 @@ export default function SideBar(props) {
                 alignItems="unset"
                 justifyContent="unset"
                 position="absolute"
-                top="8.33%"
-                bottom="8.33%"
-                left="9.46%"
-                right="9.48%"
-                {...getOverrideProps(overrides, "Vector29767144")}
+                top="0%"
+                bottom="0%"
+                left="0%"
+                right="0%"
+                {...getOverrideProps(overrides, "Vector114494")}
               ></Icon>
             </View>
-          </Flex>
-        </Flex>
-      </Flex>
-    </Flex>
+          </View>
+        </View>
+        <View
+          width="20px"
+          height="20px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          overflow="hidden"
+          position="absolute"
+          top="252px"
+          left="55px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(0,0,0,0)"
+          {...getOverrideProps(overrides, "ChartIcon")}
+        >
+          <View
+            padding="0px 0px 0px 0px"
+            width="16.67px"
+            height="16.67px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            position="absolute"
+            top="8.32%"
+            bottom="8.34%"
+            left="8.34%"
+            right="8.33%"
+            transformOrigin="top left"
+            transform="rotate(0deg)"
+            {...getOverrideProps(overrides, "Iconly/Bold/Chart")}
+          >
+            <View
+              padding="0px 0px 0px 0px"
+              width="16.67px"
+              height="16.67px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
+              position="absolute"
+              top="0%"
+              bottom="0%"
+              left="0%"
+              right="0%"
+              {...getOverrideProps(overrides, "Chart")}
+            >
+              <Icon
+                width="16.67px"
+                height="16.67px"
+                viewBox={{
+                  minX: 0,
+                  minY: 0,
+                  width: 16.66650390625,
+                  height: 16.66668701171875,
+                }}
+                paths={[
+                  {
+                    d: "M12.2242 0C15.0583 0 16.6583 1.6075 16.6667 4.44167L16.6667 12.225C16.6667 15.0583 15.0583 16.6667 12.2242 16.6667L4.44167 16.6667C1.6075 16.6667 0 15.0583 0 12.225L0 4.44167C0 1.6075 1.6075 0 4.44167 0L12.2242 0ZM8.75 3.44167C8.51583 3.3 8.2325 3.3 8.00833 3.44167C7.7825 3.5825 7.65833 3.84167 7.6825 4.1L7.6825 12.5917C7.725 12.95 8.02417 13.2167 8.37417 13.2167C8.73333 13.2167 9.0325 12.95 9.06583 12.5917L9.06583 4.1C9.09917 3.84167 8.975 3.5825 8.75 3.44167ZM4.85833 6.175C4.63333 6.03333 4.34917 6.03333 4.125 6.175C3.89917 6.31667 3.775 6.57417 3.8 6.83333L3.8 12.5917C3.8325 12.95 4.1325 13.2167 4.49083 13.2167C4.85 13.2167 5.14917 12.95 5.1825 12.5917L5.1825 6.83333C5.20833 6.57417 5.0825 6.31667 4.85833 6.175ZM12.5742 9.2C12.35 9.05833 12.0667 9.05833 11.8333 9.2C11.6075 9.34167 11.4833 9.59083 11.5167 9.85833L11.5167 12.5917C11.55 12.95 11.8492 13.2167 12.2083 13.2167C12.5583 13.2167 12.8575 12.95 12.9 12.5917L12.9 9.85833C12.9242 9.59083 12.8 9.34167 12.5742 9.2Z",
+                    fill: "rgba(167,167,167,1)",
+                    fillRule: "nonzero",
+                  },
+                ]}
+                display="block"
+                gap="unset"
+                alignItems="unset"
+                justifyContent="unset"
+                position="absolute"
+                top="0%"
+                bottom="0%"
+                left="0%"
+                right="0%"
+                {...getOverrideProps(overrides, "Vector114533")}
+              ></Icon>
+            </View>
+          </View>
+        </View>
+        <View
+          width="24px"
+          height="24px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          overflow="hidden"
+          position="absolute"
+          top="405px"
+          left="51px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "AccountIcon")}
+        >
+          <Icon
+            width="20px"
+            height="20px"
+            viewBox={{ minX: 0, minY: 0, width: 20, height: 20 }}
+            paths={[
+              {
+                d: "M3.85 15.1C4.7 14.45 5.65 13.9373 6.7 13.562C7.75 13.1873 8.85 13 10 13C11.15 13 12.25 13.1873 13.3 13.562C14.35 13.9373 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1877 13.6417 17.513 12.775C17.8377 11.9083 18 10.9833 18 10C18 7.78333 17.221 5.89567 15.663 4.337C14.1043 2.779 12.2167 2 10 2C7.78333 2 5.896 2.779 4.338 4.337C2.77933 5.89567 2 7.78333 2 10C2 10.9833 2.16267 11.9083 2.488 12.775C2.81267 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.18733 10.6627 7.512 9.988C6.83733 9.31267 6.5 8.48333 6.5 7.5C6.5 6.51667 6.83733 5.68733 7.512 5.012C8.18733 4.33733 9.01667 4 10 4C10.9833 4 11.8127 4.33733 12.488 5.012C13.1627 5.68733 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1627 9.31267 12.488 9.988C11.8127 10.6627 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88333 18.6873 3.825 17.975 2.925 17.075C2.025 16.175 1.31267 15.1167 0.788 13.9C0.262667 12.6833 0 11.3833 0 10C0 8.61667 0.262667 7.31667 0.788 6.1C1.31267 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.31233 6.1 0.787C7.31667 0.262333 8.61667 0 10 0C11.3833 0 12.6833 0.262333 13.9 0.787C15.1167 1.31233 16.175 2.025 17.075 2.925C17.975 3.825 18.6873 4.88333 19.212 6.1C19.7373 7.31667 20 8.61667 20 10C20 11.3833 19.7373 12.6833 19.212 13.9C18.6873 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6873 13.9 19.212C12.6833 19.7373 11.3833 20 10 20Z",
+                fill: "rgba(167,167,167,1)",
+                fillRule: "nonzero",
+              },
+            ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            position="absolute"
+            top="8.33%"
+            bottom="8.33%"
+            left="8.33%"
+            right="8.33%"
+            {...getOverrideProps(overrides, "Vector114685")}
+          ></Icon>
+        </View>
+        <View
+          width="26px"
+          height="28px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          overflow="hidden"
+          position="absolute"
+          top="470px"
+          left="51px"
+          transformOrigin="top left"
+          transform="rotate(0deg)"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(0,0,0,0)"
+          {...getOverrideProps(overrides, "ContactIcon")}
+        >
+          <View
+            padding="0px 0px 0px 0px"
+            width="21.67px"
+            height="21px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            position="absolute"
+            top="12.52%"
+            bottom="12.48%"
+            left="8.35%"
+            right="8.31%"
+            transformOrigin="top left"
+            transform="rotate(0deg)"
+            {...getOverrideProps(overrides, "Iconly/Bold/Message")}
+          >
+            <View
+              padding="0px 0px 0px 0px"
+              width="21.67px"
+              height="21px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
+              position="absolute"
+              top="0%"
+              bottom="0%"
+              left="0%"
+              right="0%"
+              {...getOverrideProps(overrides, "Message")}
+            >
+              <Icon
+                width="21.67px"
+                height="21px"
+                viewBox={{
+                  minX: 0,
+                  minY: 0,
+                  width: 21.66650390625,
+                  height: 21,
+                }}
+                paths={[
+                  {
+                    d: "M16.1839 0C17.6367 0 19.0342 0.618333 20.0623 1.72783C21.0914 2.835 21.6667 4.32833 21.6667 5.89167L21.6667 15.1083C21.6667 18.3633 19.2075 21 16.1839 21L5.48167 21C2.45808 21 0 18.3633 0 15.1083L0 5.89167C0 2.63667 2.44725 0 5.48167 0L16.1839 0ZM17.4092 6.06667C17.1817 6.05383 16.965 6.13667 16.8014 6.3L11.9167 10.5C11.2883 11.0612 10.3881 11.0612 9.75 10.5L4.875 6.3C4.53808 6.03167 4.07225 6.06667 3.79167 6.38167C3.49917 6.69667 3.46667 7.19833 3.71475 7.54833L3.85667 7.7L8.78583 11.8417C9.3925 12.355 10.1281 12.635 10.8983 12.635C11.6664 12.635 12.415 12.355 13.0206 11.8417L17.9075 7.63L17.9942 7.53667C18.2531 7.19833 18.2531 6.70833 17.9823 6.37C17.8317 6.19617 17.6248 6.09 17.4092 6.06667Z",
+                    fill: "rgba(167,167,167,1)",
+                    fillRule: "nonzero",
+                  },
+                ]}
+                display="block"
+                gap="unset"
+                alignItems="unset"
+                justifyContent="unset"
+                position="absolute"
+                top="0%"
+                bottom="0%"
+                left="0%"
+                right="0%"
+                {...getOverrideProps(overrides, "Vector114749")}
+              ></Icon>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        padding="0px 0px 0px 0px"
+        width="27px"
+        height="24px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="93.34%"
+        bottom="4.34%"
+        left="14.11%"
+        right="77.43%"
+        transformOrigin="top left"
+        transform="rotate(0deg)"
+        {...getOverrideProps(overrides, "Logout1141429")}
+      >
+        <Icon
+          width="27px"
+          height="24px"
+          viewBox={{ minX: 0, minY: 0, width: 27, height: 24 }}
+          paths={[
+            {
+              d: "M12.334 0C15.5597 0 18.1904 2.388 18.1904 5.328L18.1904 11.076L10.2585 11.076C9.69009 11.076 9.24061 11.484 9.24061 12C9.24061 12.504 9.69009 12.924 10.2585 12.924L18.1904 12.924L18.1904 18.66C18.1904 21.6 15.5597 24 12.3076 24L5.86957 24C2.63073 24 0 21.612 0 18.672L0 5.34C0 2.388 2.64395 0 5.88279 0L12.334 0ZM21.4909 7.86024C21.8807 7.48824 22.5174 7.48824 22.9072 7.84824L26.7012 11.3402C26.8961 11.5202 27 11.7482 27 12.0002C27 12.2402 26.8961 12.4802 26.7012 12.6482L22.9072 16.1402C22.7123 16.3202 22.4524 16.4162 22.2055 16.4162C21.9457 16.4162 21.6858 16.3202 21.4909 16.1402C21.1011 15.7802 21.1011 15.1922 21.4909 14.8322L23.5698 12.9242L18.1907 12.9242L18.1907 11.0762L23.5698 11.0762L21.4909 9.16824C21.1011 8.80824 21.1011 8.22024 21.4909 7.86024Z",
+              fill: "rgba(167,167,167,1)",
+              fillRule: "nonzero",
+            },
+          ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          position="absolute"
+          top="0%"
+          bottom="0%"
+          left="0%"
+          right="0%"
+          {...getOverrideProps(overrides, "Vector1141430")}
+        ></Icon>
+      </View>
+    </View>
   );
 }

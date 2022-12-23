@@ -117,3 +117,30 @@ export const listStudentEvents = /* GraphQL */ `
     }
   }
 `;
+export const getAdministrators = /* GraphQL */ `
+  query GetAdministrators($id: ID!) {
+    getAdministrators(id: $id) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listAdministrators = /* GraphQL */ `
+  query ListAdministrators(
+    $filter: ModelAdministratorsFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listAdministrators(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        administratorname
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

@@ -139,3 +139,39 @@ export const onDeleteStudentEvents = /* GraphQL */ `
     }
   }
 `;
+export const onCreateAdministrators = /* GraphQL */ `
+  subscription OnCreateAdministrators(
+    $filter: ModelSubscriptionAdministratorsFilterInput
+  ) {
+    onCreateAdministrators(filter: $filter) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateAdministrators = /* GraphQL */ `
+  subscription OnUpdateAdministrators(
+    $filter: ModelSubscriptionAdministratorsFilterInput
+  ) {
+    onUpdateAdministrators(filter: $filter) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteAdministrators = /* GraphQL */ `
+  subscription OnDeleteAdministrators(
+    $filter: ModelSubscriptionAdministratorsFilterInput
+  ) {
+    onDeleteAdministrators(filter: $filter) {
+      id
+      administratorname
+      createdAt
+      updatedAt
+    }
+  }
+`;
