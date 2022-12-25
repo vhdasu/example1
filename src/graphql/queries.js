@@ -61,6 +61,7 @@ export const getEvents = /* GraphQL */ `
   query GetEvents($id: ID!) {
     getEvents(id: $id) {
       id
+      adminid
       eventname
       eventcode
       eventpoints
@@ -78,6 +79,7 @@ export const listEvents = /* GraphQL */ `
     listEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        adminid
         eventname
         eventcode
         eventpoints

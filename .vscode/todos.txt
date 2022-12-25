@@ -1,1 +1,3 @@
 improve flow of getting total points and a given student events
+
+Ability for admins to enter event type and event name

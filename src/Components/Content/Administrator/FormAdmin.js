@@ -17,9 +17,7 @@ class FormAdmin extends Component {
   render() {
     return (
       <form onSubmit={this.formSubmit}>
-        <h4>Create an event</h4>
-        <input id="eventcode" type="text" defaultValue="" placeholder="Event Code..." />        
-        <input  type="submit" value="submit" />
+        
       </form>
     );
   }

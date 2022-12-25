@@ -68,6 +68,7 @@ export const onCreateEvents = /* GraphQL */ `
   subscription OnCreateEvents($filter: ModelSubscriptionEventsFilterInput) {
     onCreateEvents(filter: $filter) {
       id
+      adminid
       eventname
       eventcode
       eventpoints
@@ -80,6 +81,7 @@ export const onUpdateEvents = /* GraphQL */ `
   subscription OnUpdateEvents($filter: ModelSubscriptionEventsFilterInput) {
     onUpdateEvents(filter: $filter) {
       id
+      adminid
       eventname
       eventcode
       eventpoints
@@ -92,6 +94,7 @@ export const onDeleteEvents = /* GraphQL */ `
   subscription OnDeleteEvents($filter: ModelSubscriptionEventsFilterInput) {
     onDeleteEvents(filter: $filter) {
       id
+      adminid
       eventname
       eventcode
       eventpoints

@@ -18,9 +18,9 @@ class StudentAddEvent extends Component {
   render() {
     return (
       <form className = "studentaddevent" onSubmit={this.formSubmit}>        
-        <h14>Add an event     </h14>
-        <input classname = "input" id="eventcode"  type="text" defaultValue="" placeholder="Event Code..." />   <span/>
-        <input type="submit" value="submit" />
+        <h14>Add an event</h14><span/>
+        <input border-radius = "25px" classname = "input" id="eventcode"  type="text" defaultValue="" placeholder="Event Code..." />   <span/>
+        <input type="submit" border-radius="25px" value="submit" />
       </form>
     );
   }

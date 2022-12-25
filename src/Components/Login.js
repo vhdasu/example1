@@ -24,7 +24,7 @@ const Login = () => {
        user.authenticateUser(authDetails, {
 
         onSuccess: (data) => {
-            console.log("onSuccess: ", data);
+            //console.log("onSuccess: ", data);
         },
 
         onFailure: (err) => {
@@ -32,7 +32,7 @@ const Login = () => {
         },
 
         newPasswordRequired: (data) => {
-            console.log("newPasswordRequired: ", data);
+            //console.log("newPasswordRequired: ", data);
         },
 
        });

@@ -1,49 +1,33 @@
-import {Auth} from 'aws-amplify'
 import React, { PureComponent } from 'react'
-import FormAdmin from "./FormAdmin.js";
-import "./Administrator.css";
+import "./Student.css";
+import "./TotalPoints";
 import * as queries from '../../../graphql/queries'
 import * as mutations from '../../../graphql/mutations'
 
-class EventCodes extends PureComponent {
+class StudentEvents extends PureComponent {
     constructor(props) {
 
         super(props); 
 
     this.state = {
-      events: []
-    };
-  }
-
-   
+      events: props.events
+    };    
+  }     
 
   componentDidMount() {
-    //console.log("Component did mount called");
-   
-  }
-
-  async getUser() {
-
-    let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
-
-    ////console.log(user);
-
-    this.setState({
-        message: user
-    })
-
-  }
-
  
+  }
+
 
   render() {
- 
+
+    //console.log("In student events");
+    //console.log(this.state.events);
+
     return (
-      <div className="eventcodes">
-        
-        <FormAdmin/>
-      
-        <h4/>
+      <div className="studentevents"> 
+   
+        <h14> My Event List</h14>
         <table class="mytable">
           <thead>
             <tr>
@@ -53,7 +37,7 @@ class EventCodes extends PureComponent {
             </tr>
           </thead>
           <tbody>
-            {this.state.events.map((Event, index) => {
+            {this.props.events.map((Event, index) => {
               return (
                 <tr key={Event.eventcode}>
                   <td>{Event.eventcode}</td>
@@ -69,4 +53,4 @@ class EventCodes extends PureComponent {
         }
 }
 
-export default EventCodes
+export default StudentEvents

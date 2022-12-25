@@ -16,7 +16,7 @@ const Signup = () => {
                 console.error(err);
     
             }
-            console.log(data);  
+            //console.log(data);  
 
         });
 

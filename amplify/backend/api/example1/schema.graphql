@@ -15,6 +15,7 @@ type Students @model {
 
 type Events @model {
     id: ID!
+    adminid: ID!
     eventname: String!
     eventcode: String!
     eventpoints: Int!    

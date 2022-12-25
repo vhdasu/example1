@@ -1,12 +1,13 @@
 .totalpoints { 
     position: absolute;
-    top: 300px;
+    top: 280px;
     left: 600px;
     width: 600px;;
     height:200px;
     text-align: center;
     background-color: cadetblue;
     color: whitesmoke;
+    border-radius: 25px;
   }
  
   .studentaddevent { 
@@ -21,6 +22,20 @@
     display: inline-block;
   }
 
+  .studentevents { 
+    position: absolute;
+    top: 630px;
+    left: 440px;
+    width: 900px;;
+    height:0px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: cadetblue;
+    display: inline-block;
+    
+  }
+
+
   span {
     margin: 0 10px;
    }
@@ -29,28 +44,33 @@
     position: relative;
     top: 0%;
     left: 0%;
-    width:50%;
-    height:30%;
+    width:300px;
+    height:50px;
     text-align: center;
-    background-color: lightblue;
-    color: whitesmoke;
+    background-color:whitesmoke ;
+    color: cadetblue;
     font-size:24px;
+    border: 1px solid cadetblue;
+    
   }
 
   th{
     position: relative;
     top: 0%;
     left: 0%;
-    width:50%;
+    width: 110px;
     height:30%;
     text-align: center;
-    background-color: lightblue;
+    background-color: cadetblue;
     color: whitesmoke;
     font-size:24px;
+  
   }
 
   h14 {
-    font-family:"Josefin Sans";
-    font-size: 50px;    
+    font-family: 'Poppins';
+    font-size: 40px;    
     /* font-style: italic; */
   }
+
+ 

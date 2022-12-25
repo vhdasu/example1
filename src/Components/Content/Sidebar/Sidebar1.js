@@ -15,14 +15,14 @@ class Sidebar1 extends PureComponent {
   }
 
   componentDidMount() {
-    console.log("Sidebar1: Component did mount called");
+    //console.log("Sidebar1: Component did mount called");
  
   }
 
   signOut = () => {
     Auth.signOut()
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+    .then(data => //console.log(data))
+    .catch(err => //console.log(err));
   }
 
   

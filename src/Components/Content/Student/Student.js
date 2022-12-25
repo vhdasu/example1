@@ -1,6 +1,7 @@
 import {API, Auth} from 'aws-amplify'
 import React, { PureComponent } from 'react'
 import StudentAddEvent from "./StudentAddEvent";
+import StudentEvents from "./StudentEvents"
 import "./Student.css";
 import "./TotalPoints";
 import * as queries from '../../../graphql/queries'
@@ -27,7 +28,7 @@ class Student extends PureComponent {
   // }
 
   componentDidMount() {
-    console.log("Component did mount called");
+    //console.log("Component did mount called");
     this.getUser()
     this.fetchStudents()
   }
@@ -36,7 +37,7 @@ class Student extends PureComponent {
 
     let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
 
-    //console.log(user);
+    ////console.log(user);
 
     this.setState({
         message: user
@@ -47,7 +48,7 @@ class Student extends PureComponent {
 
   async fetchStudents(){
 
-    //console.log("Fetch students called");
+    ////console.log("Fetch students called");
 
     let response1 = await API.graphql({
        query:queries.listStudents
@@ -55,8 +56,8 @@ class Student extends PureComponent {
    });
 
   let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
-  //console.log("User:");
-  //console.log(user);  
+  ////console.log("User:");
+  ////console.log(user);  
 
   let thisuserid = response1.data.listStudents.items.filter( function(item){return (item.name === user);} )[0].id;
   this.setState({userid:thisuserid});
@@ -64,21 +65,21 @@ class Student extends PureComponent {
   let studentevents = await API.graphql({
     query:queries.listStudentEvents
   });
-  //console.log("Student Events");
-  //console.log(studentevents);
+  ////console.log("Student Events");
+  ////console.log(studentevents);
 
   let allevents = await API.graphql({
     query:queries.listEvents
   });
   this.setState({allevents: allevents.data.listEvents.items});
 
-  //console.log("Got all events");
-  //console.log(allevents);
+  ////console.log("Got all events");
+  ////console.log(allevents);
 
   let thisstudentevents = studentevents.data.listStudentEvents.items.filter( function(item){return (item.studentid === thisuserid);} );
-  //console.log(thisstudentevents);  
+  ////console.log(thisstudentevents);  
 
- // console.log("Got this student events");
+ // //console.log("Got this student events");
 
    const relevantevents  = [];
   thisstudentevents.forEach((event) => {
@@ -91,28 +92,28 @@ class Student extends PureComponent {
    //console.log(relevantevents);
 
    this.setState({events: relevantevents});
-   //console.log("Set events");
-   //console.log(this.state.events);
+   ////console.log("Set events");
+   ////console.log(this.state.events);
 
 
    const sum = relevantevents.reduce((acc, o) => acc + parseInt(o.eventpoints), 0)
    this.setState({totalpoints: sum})
  
-   //console.log("Fetch student last line");
-   //console.log(relevantevents);
+   ////console.log("Fetch student last line");
+   ////console.log(relevantevents);
   }
  
   async eventExists(eventcode)
   {
     let itemcount =  this.state.events.filter( function(item){return (item.eventcode === eventcode);}).length
-    //console.log(itemcount !== 0);
+    ////console.log(itemcount !== 0);
     return itemcount !== 0
   }
 
   async eventCodeValid(eventcode)
   {
     let itemcount =  this.state.allevents.filter( function(item){return (item.eventcode === eventcode);}).length
-    //console.log(itemcount !== 0);
+    ////console.log(itemcount !== 0);
     return itemcount === 1
   }
 
@@ -122,7 +123,7 @@ class Student extends PureComponent {
     let eventexists = await (this.eventExists(eventcode));
     let eventCodeValid = await (this.eventCodeValid(eventcode));
 
-    console.log(eventCodeValid);
+    //console.log(eventCodeValid);
 
     if (!eventCodeValid)
     {
@@ -147,7 +148,7 @@ class Student extends PureComponent {
           }
         })
 
-        //console.log(response);
+        ////console.log(response);
 
         this.fetchStudents();
       }
@@ -163,36 +164,15 @@ class Student extends PureComponent {
   }
 
   render() {
-    //console.log(this.state);
+    //console.log(this.state.events);
 
     return (
       <div className="student">
 
         <TotalPoints totalpoints = {this.state.totalpoints} />
          <StudentAddEvent addEvent={this.addEvent} />
+        <StudentEvents events = {this.state.events}/>
       
-      {/*}
-        <h4> My Event List</h4>
-        <table class="mytable">
-          <thead>
-            <tr>
-              <th>Event Code</th>
-              <th>Event Name</th>
-              <th>Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.events.map((Event, index) => {
-              return (
-                <tr key={Event.eventcode}>
-                  <td>{Event.eventcode}</td>
-                  <td>{Event.eventname}</td>
-                  <td>{Event.eventpoints}</td>                   
-                </tr>
-              );
-            })}
-          </tbody>
-        </table> */}
       </div>
     );
         }

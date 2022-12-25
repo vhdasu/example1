@@ -1,6 +1,6 @@
 .administrator {
     position: absolute;
-    top: 120px;
+    top: 150px;
     left: 0;
     width: 100%;
     height:200%;
@@ -9,4 +9,30 @@
     color: cadetblue;
   }
 
- 
+  .generatecodes {
+    position: absolute;
+    top: 90px;
+    left: 500px;
+    width: 800px;
+    height:100%;
+    text-align: center;
+    background-color:whitesmoke;
+    color: cadetblue;
+  }
+  .adminevents {
+    position: absolute;
+    top: 550px;
+    left: 500px;
+    width: 800px;
+    height:100%;
+    text-align: center;
+    background-color:whitesmoke;
+    color: cadetblue;
+  }
+
+
+
+
+  span {
+    margin: 0 10px;
+   }

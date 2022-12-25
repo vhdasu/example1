@@ -18,7 +18,7 @@ class App extends PureComponent {
   }
 
   componentDidMount() {
-    console.log("APP: Component did mount called");
+    //console.log("APP: Component did mount called");
     this.isAdmnistrator();
   }
 
@@ -31,18 +31,18 @@ class App extends PureComponent {
 
   async isAdmnistrator() {
 
-    console.log("APP: isAdministrator called");
+    //console.log("APP: isAdministrator called");
 
     let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
     let alladministrators = await API.graphql({
       query:queries.listAdministrators
     });
 
-    console.log(alladministrators)
+    //console.log(alladministrators)
 
     let isadministrator = (alladministrators.data.listAdministrators.items.filter( function(item){return (item.administratorname === user);} ).length ===1);    
     this.setState({isAdministrator: isadministrator})
-    console.log(this.state.isAdministrator);    
+    //console.log(this.state.isAdministrator);    
   }
 
 
@@ -63,7 +63,7 @@ class App extends PureComponent {
       return (            
         <div>                      
         <Header message = "EDventure"/>
-
+        <Administrator/>
         </div>
       );
     }

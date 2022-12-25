@@ -26,7 +26,7 @@ export default function StudentPage(props) {
       gap="unset"
       alignItems="unset"
       justifyContent="unset"
-      position="absolute"
+      position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
       {...getOverrideProps(overrides, "StudentPage")}

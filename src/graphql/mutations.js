@@ -89,6 +89,7 @@ export const createEvents = /* GraphQL */ `
   ) {
     createEvents(input: $input, condition: $condition) {
       id
+      adminid
       eventname
       eventcode
       eventpoints
@@ -104,6 +105,7 @@ export const updateEvents = /* GraphQL */ `
   ) {
     updateEvents(input: $input, condition: $condition) {
       id
+      adminid
       eventname
       eventcode
       eventpoints
@@ -119,6 +121,7 @@ export const deleteEvents = /* GraphQL */ `
   ) {
     deleteEvents(input: $input, condition: $condition) {
       id
+      adminid
       eventname
       eventcode
       eventpoints

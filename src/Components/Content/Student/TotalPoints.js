@@ -11,14 +11,14 @@ class TotalPoints extends PureComponent {
     };
 
    componentDidMount() {
-    console.log("Component did mount called");
+    //console.log("Component did mount called");
  
   }
 
    
 
   render() {
-    //console.log(this.state);
+    ////console.log(this.state);
 
     return (
       <div className="totalpoints">

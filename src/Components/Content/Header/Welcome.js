@@ -16,7 +16,7 @@ class Welcome extends PureComponent {
 
         let mes = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
 
-        console.log(mes);
+        //console.log(mes);
 
         this.setState({
             message: mes
