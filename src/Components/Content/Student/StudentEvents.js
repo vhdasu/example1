@@ -18,16 +18,12 @@ class StudentEvents extends PureComponent {
  
   }
 
-
-  render() {
-
-    //console.log("In student events");
-    //console.log(this.state.events);
-
+  renderStudentEvents()
+  {
     return (
       <div className="studentevents"> 
    
-        <h14> My Event List</h14>
+        <h14> My Events</h14>
         <table class="mytable">
           <thead>
             <tr>
@@ -49,8 +45,18 @@ class StudentEvents extends PureComponent {
           </tbody>
         </table>
       </div>
-    );
-        }
+    );      
+  }
+
+
+  render() {
+
+    //console.log("In student events");
+    //console.log(this.state.events);
+
+    return (this.state === null) ? (<span> ...</span>) : this.renderStudentEvents() ;
+  }
+    
 }
 
 export default StudentEvents

@@ -10,16 +10,15 @@ class Home extends PureComponent {
       }
   }
 
-  handleClick() {
-     alert("Button Clicked");
-  }
-
 
   render() {
+
+    var handleToUpdate = this.props.handleToUpdate;
+
       return (
 
         <div className="home">
-        <h7><button className="homebutton" onClick={this.handleClick} >{this.props.message}</button></h7>
+        <h7><button className="homebutton" onClick={() => handleToUpdate('home')}>{this.props.message}</button></h7>
       </div>
          
       )

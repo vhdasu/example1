@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Student.css"
+import * as EdvStyles from  "../../Styles/EdvStyles"
 
 class StudentAddEvent extends Component {
   constructor() {
@@ -19,8 +20,10 @@ class StudentAddEvent extends Component {
     return (
       <form className = "studentaddevent" onSubmit={this.formSubmit}>        
         <h14>Add an event</h14><span/>
-        <input border-radius = "25px" classname = "input" id="eventcode"  type="text" defaultValue="" placeholder="Event Code..." />   <span/>
-        <input type="submit" border-radius="25px" value="submit" />
+        <EdvStyles.Input  id="eventcode" type="text" defaultValue="" placeholder="Event Code..." />
+        {/* //<input border-radius = "25px" classname = "input" id="eventcode"  type="text" defaultValue="" placeholder="Event Code..." />   <span/> */}
+        {/* //<input type="submit" border-radius="25px" value="submit" /> */}
+        <h7><button className="addeventbutton" onClick={() => this.formSubmit}> Submit </button></h7>
       </form>
     );
   }

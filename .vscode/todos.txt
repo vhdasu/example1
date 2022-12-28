@@ -1,3 +1,22 @@
+Implement main requirments
+
+Login improvments
+
+Style all components
+
+Implement all static pages
+
 improve flow of getting total points and a given student events
 
 Ability for admins to enter event type and event name
+
+Update admin list when new codes are generated
+
+Sort the admin event list
+
+Use first and last names
+
+background is not smokewhite for the entire rendered already
+
+table scroll
+

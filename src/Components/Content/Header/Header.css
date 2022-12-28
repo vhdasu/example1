@@ -1,3 +1,17 @@
+
+
+.wholepage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color:white;
+  color: cadetblue;
+}
+
 .header {
     position: absolute;
     top: 0;
@@ -6,7 +20,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color:whitesmoke;
+    background-color:white;
     color: cadetblue;
   }
 
@@ -17,8 +31,9 @@
     height:110px;
     width: 20px;
      text-align: left;
-    background-color:whitesmoke;
+    background-color:white;
     color: cadetblue;    
+    /* //color: #321269;   */
   }
   .home {
     position: absolute;
@@ -27,72 +42,94 @@
     height:100px;
     width: 20px;
      text-align: left;
-    background-color:whitesmoke;
+    background-color:white;
     color: cadetblue;    
     font-weight: bold;
   }
   
   .homebutton {
    
-    background-color:whitesmoke;
+    background-color:white;
     color: cadetblue;    
     padding: 0;
     border: none;
     background: none;
-    
+    cursor: pointer;
   }
  
 
 
-.leaderboard {
+.standingsmenu {
   position: absolute;
   top: 120px;
   left: 750px;
   height:100px;
   width: 500px;
    text-align: left;
-  background-color:whitesmoke;
+  background-color:white;
   color: cadetblue;    
   font-weight: bold;
 }
-.prizeinfo {
+.prizeinfomenu {
   position: absolute;
   top: 120px;
-  left: 970px;
+  left: 950px;
   height:100px;
   width: 500px;
    text-align: left;
-  background-color:whitesmoke;
+  background-color:white;
   color: cadetblue;   
   font-weight: bold; 
 }
-.helpcontact {
+.prizeinfobutton {
+   
+  background-color:white;
+  color: cadetblue;    
+  padding: 0;
+  border: none;
+  background: none;
+  cursor:pointer;
+}
+
+
+
+
+.helpcontactmenu {
   position: absolute;
   top: 120px;
   left: 1220px;
   height:100px;
   width: 500px;
    text-align: left;
-  background-color:whitesmoke;
+  background-color:white;
   color: cadetblue;    
   font-weight: bold;
 }
+.helpcontactbutton {
+   
+  background-color:white;
+  color: cadetblue;    
+  padding: 0;
+  border: none;
+  background: none;
+  cursor:pointer;
+}  
 
 .signout {
   position: absolute;
   top: 120px;
   left: 1420px;
   height:100px;
-  width: 500px;
+  width: 20px;
    text-align: left;
-  background-color:whitesmoke;
+  background-color:white;
   color: cadetblue;    
   font-weight: bold;
 }
 
 .signoutbutton {
    
-  background-color:whitesmoke;
+  background-color:white;
   color: cadetblue;    
   padding: 0;
   border: none;
@@ -102,31 +139,55 @@
 
 .welcome {
   position: absolute;
-  top: 30px;
-  left: 1400px;
-  height:40px;
+  top: 90px;
+  left: 1650px;
+  height:60px;
   width: 600px;
-   text-align: center;
-  background-color:whitesmoke;
+   text-align: left;
+  background-color:white;
   color: orange;    
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+h3 {
+  font-family:"Josefin Sans";
+  font-size: 40px;    
+}
+
+h4 {
+  font-family:"Josefin Sans";
+  font-size: 50px;    
+  font-style: italic;
+}
+
+h7 {
+  font-family:"Josefin Sans";
+  font-size: 20px;     
+}
+
+h8 {
+  font-family:"Josefin Sans";
+  font-size: 25px;     
 }
 
 h9 {
   font-family:"Josefin Sans";
   font-size: 25px;     
   font-weight: bold;
+  
 }
 
-    h7 {
-      font-family:"Josefin Sans";
-      font-size: 20px;     
-    }
-   
+h91 {
+  font-family:"Josefin Sans";
+  font-size: 20px;     
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-  h4 {
-    font-family:"Josefin Sans";
-    font-size: 50px;    
-    font-style: italic;
-  }
- 
- 
+h14 {
+  font-family: 'Poppins';
+  font-size: 40px;    
+  /* font-style: italic; */
+}
+

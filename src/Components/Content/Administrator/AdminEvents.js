@@ -3,6 +3,7 @@ import {API} from 'aws-amplify'
 import "./Administrator";
 import * as queries from '../../../graphql/queries'
 import * as mutations from '../../../graphql/mutations'
+import * as EdvStyles from '../../Styles/EdvStyles';
 
 class AdminEvents extends PureComponent {
     constructor(props) {
@@ -75,7 +76,9 @@ class AdminEvents extends PureComponent {
          
       } 
 
-    });
+    });    
+
+    parsed = parsed.sort((a, b) => a.eventname > b.eventname  ? 1 : -1 );
 
     this.setState({adminevents: parsed});
     console.log(this.state.adminevents);
@@ -91,39 +94,43 @@ class AdminEvents extends PureComponent {
     //return studentevents.data.listEvents.items.filter( function(item){return (item.eventcode === eventcode);} )[0].studentid;
  }
 
+ renderAdminEvents()
+ {
+  return (
+    <div className="adminevents"> 
  
+      <EdvStyles.Title> My Events</EdvStyles.Title>
+      <table class="mytable">
+        <thead>
+          <tr>
+            <th>Event Code</th>
+            <th>Event Name</th>
+            <th>Event Points</th> 
+            <th>Claimed By</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.adminevents.map((Event, index) => {
+            return (
+              <tr key={Event.eventcode}>
+                <td>{Event.eventcode}</td>
+                <td>{Event.eventname}</td>
+                <td>{Event.eventpoints}</td>  
+                <td>{Event.studentclaimed}</td>                   
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+ }
 
   render() {
   
+    return (this.state === null) ? (<span> ...</span>) : this.renderAdminEvents() ;
 
-    return (
-      <div className="adminevents"> 
    
-        <h14> My Events</h14>
-        <table class="mytable">
-          <thead>
-            <tr>
-              <th>Event Code</th>
-              <th>Event Name</th>
-              <th>Points</th> 
-              <th>Student Claimed</th> 
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.adminevents.map((Event, index) => {
-              return (
-                <tr key={Event.eventcode}>
-                  <td>{Event.eventcode}</td>
-                  <td>{Event.eventname}</td>
-                  <td>{Event.eventpoints}</td>  
-                  <td>{Event.studentclaimed}</td>                   
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    );
         }
 }
 

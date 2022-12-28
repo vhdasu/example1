@@ -32,9 +32,9 @@ class Welcome extends PureComponent {
       
            <div className="welcome">
                          
-            <h9>Welcome</h9>
+            <h9>Welcome, </h9>
             <br/>
-            <h9>{this.state.message}</h9>
+            <h91>{this.state.message}</h91>
  
             </div>
         )

@@ -6,30 +6,30 @@
     height:200px;
     text-align: center;
     background-color: cadetblue;
-    color: whitesmoke;
+    color: white;
     border-radius: 25px;
   }
  
   .studentaddevent { 
     position: absolute;
-    top: 520px;
+    top: 570px;
     left: 600px;
     width: 600px;;
     height:0px;
     text-align: left;
-    background-color: whitesmoke;
+    background-color: white;
     color: cadetblue;
     display: inline-block;
   }
 
   .studentevents { 
     position: absolute;
-    top: 630px;
+    top: 690px;
     left: 440px;
     width: 900px;;
     height:0px;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: white;
     color: cadetblue;
     display: inline-block;
     
@@ -40,6 +40,11 @@
     margin: 0 10px;
    }
 
+   /* tbody {
+    height: 80em;
+    overflow: scroll;
+  } */
+
   .mytable td{
     position: relative;
     top: 0%;
@@ -47,13 +52,17 @@
     width:300px;
     height:50px;
     text-align: center;
-    background-color:whitesmoke ;
+    background-color:white ;
     color: cadetblue;
     font-size:24px;
     border: 1px solid cadetblue;
     
   }
-
+  #table-scroll {
+    height:150px;
+    overflow:auto;  
+    margin-top:20px;
+  }
   th{
     position: relative;
     top: 0%;
@@ -62,15 +71,20 @@
     height:30%;
     text-align: center;
     background-color: cadetblue;
-    color: whitesmoke;
+    color: white;
     font-size:24px;
   
   }
 
-  h14 {
-    font-family: 'Poppins';
-    font-size: 40px;    
-    /* font-style: italic; */
+  .addeventbutton1 {
+   
+    background-color:cadetblue;
+    color: cadetblue;    
+    padding: 5px;
+    border: 10px;    
+    border-radius: 15px;
+    cursor:pointer;
+    color: white;
+    font-size: 30px;
+    margin: 4px 2px;
   }
-
- 

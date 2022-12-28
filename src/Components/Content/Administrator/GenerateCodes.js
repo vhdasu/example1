@@ -1,8 +1,8 @@
 import {API, Auth} from 'aws-amplify'
 import React, { PureComponent } from 'react'
 import "./Administrator.css";
-import * as queries from '../../../graphql/queries'
 import * as mutations from '../../../graphql/mutations'
+import * as EdvStyles from '../../Styles/EdvStyles';
 
 class GenerateCodes extends PureComponent {
     constructor(props) {
@@ -16,7 +16,21 @@ class GenerateCodes extends PureComponent {
         this.getEventTypeString = this.getEventTypeString.bind(this);
     };
 
-   
+
+    eventList= 
+    [
+      ["School Clean-up", "CLN"],
+      ["Football Game",  "FTB"],
+      ["Volleyball Game",  "VOL"],
+      ["Basketball Game",  "BSK"],
+      ["Orchestra Concert",  "ORC"],
+      ["Band Concert",  "BND"],
+      ["Mid-winter Social",  "SOC"],
+      ["Choir Concert",  "CHR"],
+      ["Badminton Game",  "BAD"],
+      ["Tennis Game", "TEN"]
+    ];
+
 
   componentDidMount() {
     //console.log("Component did mount called");
@@ -77,6 +91,8 @@ class GenerateCodes extends PureComponent {
       }
     })
 
+
+
     //console.log(response);
   }
 
@@ -94,43 +110,43 @@ class GenerateCodes extends PureComponent {
     let getEventName = "";
     if(eventtype === 1)
     {
-      getEventName = "Vollyball";
+      getEventName = this.eventList[0][0];
     }
     else if(eventtype === 2)
     {
-      getEventName = "Football";
+      getEventName = this.eventList[1][0];
     }
     else if(eventtype === 3)
     {
-      getEventName = "Swim";
+      getEventName = this.eventList[2][0];
     }
     else if(eventtype === 4)
     {
-      getEventName = "Tennis";
+      getEventName = this.eventList[3][0];
     }
     else if(eventtype === 5)
     {
-      getEventName = "Chess";
+      getEventName = this.eventList[4][0];
     }
     else if(eventtype === 6)
     {
-      getEventName = "Robotics";
+      getEventName = this.eventList[5][0];
     }
     else if(eventtype === 7)
     {
-      getEventName = "Debate";
+      getEventName = this.eventList[6][0];
     }
     else if(eventtype === 8)
     {
-      getEventName = "Honor Society";
+      getEventName = this.eventList[7][0];
     }
     else if(eventtype === 9)
     {
-      getEventName = "Winter Concert";
+      getEventName = this.eventList[8][0];
     }
     else if(eventtype === 10)
     {
-      getEventName = "STEM Club";
+      getEventName = this.eventList[9][0];
     }
 
     //console.log(getEventName);
@@ -145,77 +161,80 @@ class GenerateCodes extends PureComponent {
     let seventtype = "";
     if(eventtype === 1)
     {
-      seventtype = "VOL";
+      seventtype = this.eventList[0][1];
     }
     else if(eventtype === 2)
     {
-      seventtype = "FOO";
+      seventtype = this.eventList[1][1];
     }
     else if(eventtype === 3)
     {
-      seventtype = "SWI";
+      seventtype = this.eventList[2][1];
     }
     else if(eventtype === 4)
     {
-      seventtype = "TEN";
+      seventtype = this.eventList[3][1];
     }
     else if(eventtype === 5)
     {
-      seventtype = "CHE";
+      seventtype = this.eventList[4][1];
     }
     else if(eventtype === 6)
     {
-      seventtype = "ROB";
+      seventtype = this.eventList[5][1];
     }
     else if(eventtype === 7)
     {
-      seventtype = "DEB";
+      seventtype = this.eventList[6][1];
     }
     else if(eventtype === 8)
     {
-      seventtype = "HON";
+      seventtype = this.eventList[7][1];
     }
     else if(eventtype === 9)
     {
-      seventtype = "CON";
+      seventtype = this.eventList[8][1];
     }
     else if(eventtype === 10)
     {
-      seventtype = "STE";
+      seventtype = this.eventList[9][1];
     }
 
     //console.log(seventtype);
     return seventtype;
   }
 
+  
+
   render() {
  
     return (
       <div className="generatecodes">
-        
-        <h4>Generate codes for an event</h4>
-        <label>Event Type</label> <span/>
-        <select id="eventtype">
+         <EdvStyles.Line/>
+        <EdvStyles.Title>Generate codes for an event</EdvStyles.Title>
+        <EdvStyles.Label>Event Type</EdvStyles.Label> <span/><span/><span/><span/>
+        <EdvStyles.Select id="eventtype">
           <option value="0">Select Event Type:</option>
-          <option value="1">Vollyball</option>
-          <option value="2">Football</option>
-          <option value="3">Swim</option>
-          <option value="4">Tennis</option>
-          <option value="5">Chess</option>
-          <option value="6">Robotics</option>
-          <option value="7">Debate</option>
-          <option value="8">Honor Society</option>
-          <option value="9">Winter Concert</option>
-          <option value="10">STEM Club</option>
-        </select>    
+          <option value="1">{this.eventList[0][0]}</option>
+          <option value="2">{this.eventList[1][0]}</option>
+          <option value="3">{this.eventList[2][0]}</option>
+          <option value="4">{this.eventList[3][0]}</option>
+          <option value="5">{this.eventList[4][0]}</option>
+          <option value="6">{this.eventList[5][0]}</option>
+          <option value="7">{this.eventList[6][0]}</option>
+          <option value="8">{this.eventList[7][0]}</option>
+          <option value="9">{this.eventList[8][0]}</option>
+          <option value="10">{this.eventList[9][0]}</option>
+        </EdvStyles.Select>    
         <br/><br/>
-        <label align = "right">Points</label> <span/><span/><span/><span/> <span/> 
-        <input  id="Points" type="text" defaultValue="5" placeholder="5" />     <br/>  <br/>        
-        <label>Number of Codes</label> <span/>
-        <input  id="numberofcodes" type="text" defaultValue="10" placeholder="10" />        
+        <EdvStyles.Label align = "right">Points</EdvStyles.Label> <span/><span/><span/><span/> <span/> <span/> <span/> 
+        <EdvStyles.Input  id="Points" type="text" defaultValue="5" placeholder="5" />     <br/>  <br/>        
+        <EdvStyles.Label>Number of Codes</EdvStyles.Label> <span/> 
+        <EdvStyles.Input  id="numberofcodes" type="text" defaultValue="10" placeholder="10" />        
         <br/>        
         <br/>       
-        <span/><span/><span/><span/><button onClick={this.generateCodes.bind(this)} className="generatecodesbutton">Generate Codes</button>
+        <span/><span/><span/><span/><span/><span/><span/><span/><span/><EdvStyles.Button onClick={this.generateCodes.bind(this)} className="generatecodesbutton">Generate Codes</EdvStyles.Button>
+        <EdvStyles.Line/>
       </div>
     );
         }

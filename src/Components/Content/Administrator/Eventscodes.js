@@ -15,6 +15,7 @@ class EventCodes extends PureComponent {
     };
   }
 
+
    
 
   componentDidMount() {
@@ -41,9 +42,10 @@ class EventCodes extends PureComponent {
     return (
       <div className="eventcodes">
         
-        <FormAdmin/>
-      
+        <FormAdmin/>      
         <h4/>
+
+        <div id="table-scroll">
         <table class="mytable">
           <thead>
             <tr>
@@ -64,6 +66,7 @@ class EventCodes extends PureComponent {
             })}
           </tbody>
         </table>
+      </div>
       </div>
     );
         }

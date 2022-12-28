@@ -42,31 +42,29 @@ class App extends PureComponent {
 
     let isadministrator = (alladministrators.data.listAdministrators.items.filter( function(item){return (item.administratorname === user);} ).length ===1);    
     this.setState({isAdministrator: isadministrator})
-    //console.log(this.state.isAdministrator);    
+    this.setState({username: user});
+    console.log(this.state.isAdministrator);    
+    console.log(this.state.username);    
   }
 
+  renderPage()
+  {
+      return (
+
+        <div>                      
+          <Header message = "EDventure" isadministrator = {this.state.isAdministrator} username = {this.state.username}/>
+          { /* <Administrator/> */}
+        </div>
+
+      );
+  }
 
   render() {
 
-    if(!this.state.isAdministrator)
-    {
-      return (
-            
-        <div>         
-          <Header message = "EDventure"/>         
-          <Student/>
-        </div>
-      );
-    }
-    else
-    {
-      return (            
-        <div>                      
-        <Header message = "EDventure"/>
-        <Administrator/>
-        </div>
-      );
-    }
+     
+      return  (this.state.username === null) ? (<span>...</span>) : this.renderPage() ;
+         
+ 
     }
 }
 

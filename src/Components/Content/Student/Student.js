@@ -163,9 +163,8 @@ class Student extends PureComponent {
     };
   }
 
-  render() {
-    //console.log(this.state.events);
-
+  renderStudent()
+  {
     return (
       <div className="student">
 
@@ -175,6 +174,14 @@ class Student extends PureComponent {
       
       </div>
     );
+  }
+  
+  render() {
+    //console.log(this.state.events);
+
+    return (this.state === null || this.state.totalpoints === null || this.state.events === null) ? (<span> ...</span>) : this.renderStudent() ;
+
+   
         }
 }
 
