@@ -72,12 +72,14 @@ class AdminEvents extends PureComponent {
           eventname: item.eventname,
           eventpoints: item.eventpoints,
           studentclaimed: item.studentclaimed.length === 0 ? "" :           
-          students.data.listStudents.items.filter( function(item2){return (item2.id ===  item.studentclaimed)})[0].name
+          students.data.listStudents.items.filter( function(item2){return (item2.id ===  item.studentclaimed)})[0].firstname + " " +
+          students.data.listStudents.items.filter( function(item2){return (item2.id ===  item.studentclaimed)})[0].lastname
          
       } 
 
     });    
 
+     console.log("parsed called");
     parsed = parsed.sort((a, b) => a.eventname > b.eventname  ? 1 : -1 );
 
     this.setState({adminevents: parsed});

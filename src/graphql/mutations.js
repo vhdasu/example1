@@ -51,6 +51,9 @@ export const createStudents = /* GraphQL */ `
     createStudents(input: $input, condition: $condition) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }
@@ -64,6 +67,9 @@ export const updateStudents = /* GraphQL */ `
     updateStudents(input: $input, condition: $condition) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }
@@ -77,6 +83,9 @@ export const deleteStudents = /* GraphQL */ `
     deleteStudents(input: $input, condition: $condition) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }

@@ -19,7 +19,7 @@ class GenerateCodes extends PureComponent {
 
     eventList= 
     [
-      ["School Clean-up", "CLN"],
+      ["Honor Society", "HON"],
       ["Football Game",  "FTB"],
       ["Volleyball Game",  "VOL"],
       ["Basketball Game",  "BSK"],

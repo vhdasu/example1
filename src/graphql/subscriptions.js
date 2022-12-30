@@ -39,6 +39,9 @@ export const onCreateStudents = /* GraphQL */ `
     onCreateStudents(filter: $filter) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }
@@ -49,6 +52,9 @@ export const onUpdateStudents = /* GraphQL */ `
     onUpdateStudents(filter: $filter) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }
@@ -59,6 +65,9 @@ export const onDeleteStudents = /* GraphQL */ `
     onDeleteStudents(filter: $filter) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }

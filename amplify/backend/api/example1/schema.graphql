@@ -11,6 +11,9 @@ type Todo @model {
 type Students @model {
     id: ID!
     name: String!
+    grade: String
+    firstname: String
+    lastname: String
 }
 
 type Events @model {

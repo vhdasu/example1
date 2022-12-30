@@ -35,6 +35,9 @@ export const getStudents = /* GraphQL */ `
     getStudents(id: $id) {
       id
       name
+      grade
+      firstname
+      lastname
       createdAt
       updatedAt
     }
@@ -50,6 +53,9 @@ export const listStudents = /* GraphQL */ `
       items {
         id
         name
+        grade
+        firstname
+        lastname
         createdAt
         updatedAt
       }
