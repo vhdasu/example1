@@ -1,4 +1,4 @@
-npm start
+npm start  -- to launch the app locally
 
 amplify push api
 

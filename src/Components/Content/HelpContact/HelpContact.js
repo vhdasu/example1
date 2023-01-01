@@ -19,7 +19,7 @@ class HelpContact extends PureComponent {
  
       <h3>FAQ</h3>
 
-      <h9>Q: I entered my code, but it is not showing up.</h9><br/>
+      <h9>Q: I entered my code, but it is not showing up. What should I do now?</h9><br/>
       <h8>A: Double check that you’ve entered the correct code. The code is case sensitive, 9 characters long, and you must enter the hyphens.</h8><br/><br/><br/>
 
       <h9>Q: If I got chosen as a random winner for the quarter, how do I know what prize I got?</h9><br/>
