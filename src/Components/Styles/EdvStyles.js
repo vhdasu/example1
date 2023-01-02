@@ -19,33 +19,24 @@ export const Input = styled.input`
   padding: 10px;
   margin: 10px;
   background: smokewhite;
-  border: 1px solid cadetblue;
+  border: 3px solid cadetblue;
   border-radius: 25px;
   ::placeholder {
     color: cadetblue;
   }
 `;
 
-export const Button = styled.button`
-  color: cadetblue;
-  font-size: 20px;
-  margin: 10px;
-  padding: 5px 20px;
-  border: 2px solid cadetblue;
-  border-radius: 15px;
-`;
-
 export const Select = styled.select`
-  width: 220px;
+  width: 230px;
   height: 50px;
   background: smokewhite;
   font-size: 20px;
   color: cadetblue;
-  padding-left: 5px;
-  font-size: 14px;
-  border: 1px solid cadetblue;
-  border-radius: 25px;
   margin-left: 10px;
+  padding-left: 5px;
+  border: 3px solid cadetblue;
+  border-radius: 25px;
+
 
   option {
     color: cadetblue;
@@ -57,6 +48,32 @@ export const Select = styled.select`
     padding: 0px 2px 1px;
   }
 `;
+
+
+// export const Button = styled.button`
+//   color: cadetblue;
+//   font-size: 20px;
+//   margin: 10px;
+//   padding: 5px 20px;
+//   border: 2px solid cadetblue;
+//   border-radius: 15px;
+// `;
+
+export const Button = styled.button`
+background-color:cadetblue;
+width:200px;
+color: cadetblue;    
+padding: 10px;
+border: 10px;    
+border-radius: 15px;
+cursor:pointer;
+color: white;
+font-size: 20px;
+margin: 4px 2px;
+`;
+
+
+
 
 export const Line = styled.line`
  

@@ -16,7 +16,7 @@ class PrizeInfoMenu extends PureComponent {
       return (
 
         <div className="prizeinfomenu">
-        <h7><button className="prizeinfobutton" onClick={() => handleToUpdate('prizeinfo')}>{this.props.message}</button></h7>
+        <h7><button  className={this.props.prizeinfobuttonclassname} onClick={() => handleToUpdate('prizeinfo')}>{this.props.message}</button></h7>
       </div>
          
       )

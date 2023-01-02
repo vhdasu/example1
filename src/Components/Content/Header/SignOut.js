@@ -22,7 +22,7 @@ class SignOut extends PureComponent {
       return (
 
         <div className="signout">
-        <h7><button className="signoutbutton" onClick={this.handleClick} >{this.props.message}</button></h7>
+        <h7><button className={this.props.signoutbuttonclassname} onClick={this.handleClick} >{this.props.message}</button></h7>
       </div>
          
       )

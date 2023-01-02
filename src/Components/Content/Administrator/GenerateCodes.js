@@ -16,7 +16,7 @@ class GenerateCodes extends PureComponent {
         this.getEventTypeString = this.getEventTypeString.bind(this);
     };
 
-
+  // list containing event names
     eventList= 
     [
       ["Honor Society", "HON"],
@@ -41,7 +41,7 @@ class GenerateCodes extends PureComponent {
 
 
  
-
+  // method utilizes Date Class to get the current date which will be included in the code
   yyyymmdd() {
     function twoDigit(n) { return (n < 10 ? '0' : '') + n; }
 
@@ -49,17 +49,24 @@ class GenerateCodes extends PureComponent {
     return '' + now.getFullYear() + twoDigit(now.getMonth() + 1) + twoDigit(now.getDate());
 }
 
-
-  async generateCodes() {
+async generateCodes() {
+  // this method uses the inputted event name, point value, and code value to build unique codes that will be used for the events
 
     //create 10 random codes
+    // saves point value for a certain event
     let points = document.getElementById("Points").value;
+    // saves the first three letters of the specific event
     let eventtype = this.getEventTypeString();
+    // number of codes the user wishes to generate
     let numberofcodes = document.getElementById("numberofcodes").value;
+    // date that will be included in the code
     let todaydate =  this.yyyymmdd();
- 
+
+
+    // generates the number of inputted codes
     for (let i = 0; i < Number(numberofcodes); i++) 
     {
+      // random number that is a part of the code
       let randomNumber = this.getRndInteger(10000000, 99999999);
 
       let eventcode = eventtype + "_" + todaydate + "_" + randomNumber;
@@ -68,7 +75,7 @@ class GenerateCodes extends PureComponent {
 
       //console.log(eventcode);
       //console.log(eventName)
-
+      // will insert the generated
       this.insertEventCode(eventcode, eventName, points )
     }        
   }
@@ -230,10 +237,10 @@ class GenerateCodes extends PureComponent {
         <EdvStyles.Label align = "right">Points</EdvStyles.Label> <span/><span/><span/><span/> <span/> <span/> <span/> 
         <EdvStyles.Input  id="Points" type="text" defaultValue="5" placeholder="5" />     <br/>  <br/>        
         <EdvStyles.Label>Number of Codes</EdvStyles.Label> <span/> 
-        <EdvStyles.Input  id="numberofcodes" type="text" defaultValue="10" placeholder="10" />        
+        <EdvStyles.Input  id="numberofcodes" type="text" defaultValue="1" placeholder="10" />        
         <br/>        
         <br/>       
-        <span/><span/><span/><span/><span/><span/><span/><span/><span/><EdvStyles.Button onClick={this.generateCodes.bind(this)} className="generatecodesbutton">Generate Codes</EdvStyles.Button>
+        <span/><span/><span/><span/><span/><span/><span/><span/><span/><EdvStyles.Button  onClick={this.generateCodes.bind(this)} >Generate Codes</EdvStyles.Button>
         <EdvStyles.Line/>
       </div>
     );

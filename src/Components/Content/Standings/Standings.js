@@ -92,7 +92,7 @@ mm_dd_yyyy() {
   function twoDigit(n) { return (n < 10 ? '0' : '') + n; }
 
   var now = new Date();
-  return '' + twoDigit(now.getMonth() + 1) + '/' + twoDigit(now.getDate()) + '/' + now.getFullYear();
+  return '  ' + twoDigit(now.getMonth() + 1) + '/' + twoDigit(now.getDate()) + '/' + now.getFullYear();
 }
 
  onStandingsClick()
@@ -141,7 +141,7 @@ mm_dd_yyyy() {
                 <h7><button className="quaterlyreportbutton" onClick={this.renderStandings}> Current Standings </button></h7>
                 <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
                 <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
-        <h3>Current Standings as of  {this.mm_dd_yyyy()}</h3>
+        <h3>Current standings as of {this.mm_dd_yyyy()}</h3>
         <table class="mytable"> 
             <thead>
               <tr>

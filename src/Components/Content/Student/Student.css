@@ -13,8 +13,8 @@
   .studentaddevent { 
     position: absolute;
     top: 570px;
-    left: 600px;
-    width: 600px;;
+    left: 580px;
+    width: 700px;;
     height:0px;
     text-align: left;
     background-color: white;
@@ -39,6 +39,12 @@
   span {
     margin: 0 10px;
    }
+
+   span1 {
+    margin: 0 5px;
+   }
+
+
 
    /* tbody {
     height: 80em;
@@ -76,15 +82,18 @@
   
   }
 
-  .addeventbutton1 {
+  .addeventbutton {
    
     background-color:cadetblue;
     color: cadetblue;    
-    padding: 5px;
+    padding: 10px;
+    width: 115px;
     border: 10px;    
     border-radius: 15px;
     cursor:pointer;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     margin: 4px 2px;
   }
+
+ 

@@ -16,7 +16,7 @@ class HelpContactMenu extends PureComponent {
       return (
 
         <div className="helpcontactmenu">
-        <h7><button className="helpcontactbutton" onClick={() => handleToUpdate('helpcontact')}>{this.props.message}</button></h7>
+        <h7><button className={this.props.helpcontactbuttonclassname}  onClick={() => handleToUpdate('helpcontact')}>{this.props.message}</button></h7>
       </div>
          
       )

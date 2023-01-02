@@ -16,7 +16,7 @@ class StandingsMenu extends PureComponent {
       return (
 
         <div className="standingsmenu">
-        <h7><button className="prizeinfobutton" onClick={() => handleToUpdate('standings')}>{this.props.message}</button></h7>
+        <h7><button className={this.props.standingsbuttonclassname}  onClick={() => handleToUpdate('standings')}>{this.props.message}</button></h7>
       </div>
          
       )

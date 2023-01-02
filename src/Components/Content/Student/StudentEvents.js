@@ -51,10 +51,10 @@ class StudentEvents extends PureComponent {
 
   render() {
 
-    //console.log("In student events");
-    //console.log(this.state.events);
+    console.log("In student events");
+    console.log(this.state.events);
 
-    return (this.state === null) ? (<span> ...</span>) : this.renderStudentEvents() ;
+    return (this.state === null  || this.state.events === null) ? (<span> ...</span>) : this.renderStudentEvents() ;
   }
     
 }

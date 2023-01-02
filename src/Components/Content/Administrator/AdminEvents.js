@@ -100,7 +100,7 @@ class AdminEvents extends PureComponent {
  {
   return (
     <div className="adminevents"> 
- 
+      <br/>
       <EdvStyles.Title> My Events</EdvStyles.Title>
       <table class="mytable">
         <thead>

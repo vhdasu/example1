@@ -62,7 +62,7 @@ class Administrator extends PureComponent {
     //console.log(this.state.events); 
     //console.log(this.state); 
   
-    return (this.state === null) ? (<span> Loading....Please wait.</span>) : this.renderAdministrator() ;
+    return (this.state === null) ? (<span className="administrator"> Loading....Please wait.</span>) : this.renderAdministrator() ;
 }
 
 }

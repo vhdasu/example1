@@ -17,7 +17,7 @@ class HelpContact extends PureComponent {
     return (      
       <div className = "helpcontact">
  
-      <h3>FAQ</h3>
+      <h3>FAQs</h3>
 
       <h9>Q: I entered my code, but it is not showing up. What should I do now?</h9><br/>
       <h8>A: Double check that you’ve entered the correct code. The code is case sensitive, 9 characters long, and you must enter the hyphens.</h8><br/><br/><br/>

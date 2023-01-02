@@ -31,18 +31,55 @@ class Header extends PureComponent {
   componentDidMount() {
     //console.log("Component did mount called");
     this.setState({activepage:"home"}); 
+
+    this.setButtonStyles("home");
   }
 
-  handleToUpdate(someArg){
+  setButtonStyles(activepage)
+  {
+    this.setState({homebuttonclassname:"homebutton"});
+    this.setState({standingsbuttonclassname:"homebutton"});
+    this.setState({prizeinfobuttonclassname:"homebutton"});
+    this.setState({helpcontactbuttonclassname:"homebutton"});
+    this.setState({signoutbuttonclassname:"homebutton"});
+    this.setState({homebuttonclassname:"homebutton"});
+    this.setState({standingsbuttonclassname:"homebutton"});
+    this.setState({prizeinfobuttonclassname:"homebutton"});
+    this.setState({helpcontactbuttonclassname:"homebutton"});
+    this.setState({signoutbuttonclassname:"homebutton"});
+
+
+    if(activepage === "home")
+    {
+      this.setState({homebuttonclassname:"homebuttonhighlighted"});
+    }
+    else if (activepage === "standings")
+    {
+      this.setState({standingsbuttonclassname:"homebuttonhighlighted"});
+    }
+    else if (activepage === "helpcontact")
+    {
+      this.setState({helpcontactbuttonclassname:"homebuttonhighlighted"});
+    }
+    else if (activepage === "prizeinfo")
+    {
+      this.setState({prizeinfobuttonclassname:"homebuttonhighlighted"});
+    }
+    else if (activepage === "singout")
+    {
+      this.setState({signoutbuttonclassname:"homebuttonhighlighted"});
+    }
+
+  }
+
+
+  handleToUpdate(activepage){
     //alert('We pass argument from Child to Parent: ' + someArg);
-    this.setState({activepage:someArg}); 
+    this.setState({activepage:activepage}); 
+
+    this.setButtonStyles(activepage)
+    
   }
-
-  // handleHelpContactButton()
-  // {
-  //   this.setState({activepage:"helpcontact"}); 
-  // }
-
 
 
   renderPage()
@@ -52,11 +89,11 @@ class Header extends PureComponent {
     let topmenu = 
     [
      <EdventureLogo  message={this.props.message}/> ,
-     <Home  handleToUpdate = {handleToUpdate.bind(this)} message="HOME"/>,
-     <StandingsMenu handleToUpdate = {handleToUpdate.bind(this)} message="STANDINGS"/>,     
-     <PrizeInfoMenu handleToUpdate = {handleToUpdate.bind(this)} message="PRIZE INFORMATION"/>,     
-     <HelpContactMenu handleToUpdate = {handleToUpdate.bind(this)} message="HELP/CONTACT"/>,
-     <SignOut message="SIGNOUT"/>, <Welcome/>
+     <Home  homebuttonclassname = {this.state.homebuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="HOME"/>,
+     <StandingsMenu standingsbuttonclassname = {this.state.standingsbuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="STANDINGS"/>,     
+     <PrizeInfoMenu prizeinfobuttonclassname = {this.state.prizeinfobuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="PRIZE INFORMATION"/>,     
+     <HelpContactMenu helpcontactbuttonclassname = {this.state.helpcontactbuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="HELP/CONTACT"/>,
+     <SignOut signoutbuttonclassname = {this.state.signoutbuttonclassname} message="SIGNOUT"/>, <Welcome/>
     ];
 
     console.log(this.state.activepage);

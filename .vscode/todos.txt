@@ -1,40 +1,40 @@
-Add new logins/data
-Complete Standings page
 
 
-Implement main requirments
-
-Login improvments
+add Edventure logo next to Edventure text
 
 Style all components
 
-Improve Q&A page
-
-improve flow of getting total points and a given student events
-
-Ability for admins to enter event type and event name
+Hide report generation button for students
 
 Update admin list when new codes are generated
 
 Sort the admin event list
 
-Use first and last names
-add grades for students
-
 table scroll
 
 Generate codes button pointer
 
-with no events, the student page look weird
-
-
-remove dhruti dasu users
-
-highlight menu item when clicked
-
 event code can be used multiple times
 
-comments
+
+
+add northcreek high school text and powered by, 
+
+
+
+
+////// DHRUTI ITEMS
+
+add comments
+
+Improve Q&A page
+
+
+///////// LATER
+improve flow of getting total points and a given student events
+Ability for admins to enter event type and event name
+with no events, the student page look weird
+
 
 
 

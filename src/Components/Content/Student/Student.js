@@ -12,25 +12,26 @@ class Student extends PureComponent {
     constructor(props) {
 
         super(props); 
-
-    this.state = {
-      events: []
-    };
+ 
+      this.state = {
+        events: []
+      };
+ 
 
     this.addEvent = this.addEvent.bind(this);
     this.deleteEvent = this.deleteEvent.bind(this);
   }
-
-  // addEvent(eventname, eventid) {
-  //   this.setState(prevState => ({
-  //       events: [...prevState.Event, { eventname, eventid }]
-  //   }));
-  // }
+ 
 
   componentDidMount() {
     //console.log("Component did mount called");
-    this.getUser()
-    this.fetchStudents()
+
+    if(this.state.events.length === 0)
+    {
+      console.log("getting students");
+      this.getUser()
+      this.fetchStudents()
+    }
   }
 
   async getUser() {
