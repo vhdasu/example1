@@ -15,8 +15,8 @@ class Home extends PureComponent {
 
     var handleToUpdate = this.props.handleToUpdate;
 
-      console.log("in home button render");
-      console.log(this.props.homebuttonclassname);
+      //console.log("in home button render");
+      //console.log(this.props.homebuttonclassname);
 
       return (
 

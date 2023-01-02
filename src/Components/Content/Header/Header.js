@@ -117,7 +117,7 @@ class Header extends PureComponent {
     else if (this.state.activepage === "standings")
     {
       //console.log(this.state.activepage);
-      wholepage =  [topmenu, <Standings/>];      
+      wholepage =  [topmenu, <Standings isadministrator = {this.props.isadministrator} />];      
     }
     else if (this.state.activepage === "helpcontact")
     {

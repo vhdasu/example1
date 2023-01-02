@@ -8,15 +8,17 @@ class Standings extends PureComponent {
       super(props)
 
       this.getTopStudents = this.getTopStudents.bind(this);
-      this.renderQuarterlyReport = this.renderQuarterlyReport.bind(this);
-      this.renderButtons = this.renderButtons.bind(this);
+      this.renderQuarterlyReport = this.renderQuarterlyReport.bind(this);      
       this.renderStandings = this.renderStandings.bind(this);
+      this.renderStandingsAdmin = this.renderStandingsAdmin.bind(this);
+      this.renderStandingsStudent = this.renderStandingsStudent.bind(this);
+ 
 
       this.onStandingsClick = this.onStandingsClick.bind(this);
       this.onQuaterlyReportClick = this.onQuaterlyReportClick.bind(this);
       this.onRandomWinnersClick = this.onRandomWinnersClick.bind(this);
 
-
+      this.setState({isadministrator:this.props.isadministrator})
       this.setState({reporttype:"standings"});
   }
 
@@ -107,27 +109,92 @@ mm_dd_yyyy() {
  {
     this.setState({reporttype:"randomwinners"})
  }
+  
 
-
- renderButtons()
+ renderStandingsAdmin()
  {
-    return (
+  return(
+    <div className = "standings">
+            <h7><button className="quaterlyreportbutton" onClick={this.renderStandings}> Current Standings </button></h7>
+            <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
+            <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
+    <h3>Current standings as of {this.mm_dd_yyyy()}</h3>
+    <table class="mytable"> 
+        <thead>
+          <tr>
+          <th>Position</th>
+            <th>Student Name</th>
+            <th>Grade</th>
+            <th>Total Points</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.studentspointstop5.map((Student, index) => {
+            return (
+              <tr key={Student.studentname}>
+                <td>{++index}</td>
+                <td>{Student.studentname}</td>
+                <td>{Student.studentgrade}</td>
+                <td>{Student.studentpoints}</td>                    
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    
+      <br/><br/><br/>
+            
 
-      <div className = "standings">
-
-      <h7><button className="quaterlyreportbutton" onClick={this.renderStandings}> Current Standings </button></h7>
-      <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
-      <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
-      </div>
-    );
+    </div>
+  );
  }
+
+ renderStandingsStudent()
+ {
+  return(
+    <div className = "standings">
+            {/* <h7><button className="quaterlyreportbutton" onClick={this.renderStandings}> Current Standings </button></h7> */}
+    <h3>Current standings as of {this.mm_dd_yyyy()}</h3>
+    <table class="mytable"> 
+        <thead>
+          <tr>
+          <th>Position</th>
+            <th>Student Name</th>
+            <th>Grade</th>
+            <th>Total Points</th> 
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.studentspointstop5.map((Student, index) => {
+            return (
+              <tr key={Student.studentname}>
+                <td>{++index}</td>
+                <td>{Student.studentname}</td>
+                <td>{Student.studentgrade}</td>
+                <td>{Student.studentpoints}</td>                    
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    
+      <br/><br/><br/>
+            
+
+    </div>
+  );
+ }
+
+
 
   renderStandings()
   {
+    console.log("in renderstandings")
+
     if(typeof(this.state.studentspointstop5) === 'undefined' || this.state.studentspointstop5 === null)
     {
 
-      // console.log("in renderstandings")
+       
       // console.log(this.state.studentspointstop5)
 
       return (
@@ -136,41 +203,19 @@ mm_dd_yyyy() {
     }
     else
     {
-      return(
-        <div className = "standings">
-                <h7><button className="quaterlyreportbutton" onClick={this.renderStandings}> Current Standings </button></h7>
-                <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
-                <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
-        <h3>Current standings as of {this.mm_dd_yyyy()}</h3>
-        <table class="mytable"> 
-            <thead>
-              <tr>
-              <th>Position</th>
-                <th>Student Name</th>
-                <th>Grade</th>
-                <th>Total Points</th> 
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.studentspointstop5.map((Student, index) => {
-                return (
-                  <tr key={Student.studentname}>
-                    <td>{++index}</td>
-                    <td>{Student.studentname}</td>
-                    <td>{Student.studentgrade}</td>
-                    <td>{Student.studentpoints}</td>                    
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        
-          <br/><br/><br/>
-                
-
-        </div>
-      );
-            }
+      console.log(this.props.isadministrator);
+      if(this.props.isadministrator)  
+      {
+        console.log("in render admin")
+        return this.renderStandingsAdmin();
+      }
+      else
+      {
+        console.log("in render student")
+        return this.renderStandingsStudent();
+      }
+    
+    }
   }
 
   renderQuarterlyReport()
@@ -261,20 +306,7 @@ mm_dd_yyyy() {
   }
 
 
-  render1() {    
-    
-
-    //console.log(this.state.renderresult);
-    return ((this.state === null || this.state.reporttype === null || this.state.studentspointstop5 === null)  ? (<span> Loading....Please wait.</span>) : 
-    
-    this.state.reporttype === "standings" ?  this.renderButtons() + this.renderStandings() :
-
-    this.state.reporttype === "quarterlyreport" ?   this.renderQuarterlyReport() :
-
-    this.renderButtons() + this.renderRandomWinners() 
-    );
-  }
-
+   
 
  
 }
