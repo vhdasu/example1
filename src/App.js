@@ -43,8 +43,8 @@ class App extends PureComponent {
     let isadministrator = (alladministrators.data.listAdministrators.items.filter( function(item){return (item.administratorname === user);} ).length ===1);    
     this.setState({isAdministrator: isadministrator})
     this.setState({username: user});
-    console.log(this.state.isAdministrator);    
-    console.log(this.state.username);    
+    //console.log(this.state.isAdministrator);    
+    //console.log(this.state.username);    
   }
 
   renderPage()

@@ -12,11 +12,13 @@ class AdminEvents extends PureComponent {
    
         this.state = {
           userid: props.userid,
-          adminevents: []
+          adminevents: [],
+          admineventsupdated: props.admineventsupdated
         }; 
 
         this.getAdminEvents = this.getAdminEvents.bind(this);
         this.getStudentId = this.getStudentId.bind(this);
+        this.renderAdminEvents = this.renderAdminEvents.bind(this);
 
   }     
 
@@ -26,13 +28,13 @@ class AdminEvents extends PureComponent {
 
   async getAdminEvents()
   {
-    // get all events belong to this admin 
+    // get all events that the admin generated
     let allevents = await API.graphql({
       query:queries.listEvents
     });
 
-    console.log(this.state.userid); 
-    console.log(allevents); 
+    //console.log(this.state.userid); 
+    //console.log(allevents); 
 
     let adminid = this.state.userid;
 
@@ -40,10 +42,10 @@ class AdminEvents extends PureComponent {
 
     
 
-    console.log(thisadminevents);    
+    //console.log(thisadminevents);    
 
 
-    //get students claimed this admin events
+    //get students that claimed these events
     let studentevents = await API.graphql({
       query:queries.listStudentEvents
     });
@@ -52,20 +54,23 @@ class AdminEvents extends PureComponent {
       query:queries.listStudents
     });
 
-    console.log("list students");
-    console.log(students);  
+    //console.log("list students");
+    //console.log(students);  
 
     var parsed1 = thisadminevents.map(function (item) {
       return {
+         // gets the event name, code, and point value
           eventcode: item.eventcode,
           eventname: item.eventname,
           eventpoints: item.eventpoints,
+          // finds the student that claimed a particular code
           studentclaimed: studentevents.data.listStudentEvents.items.filter( function(item1){return (item1.eventcode === item.eventcode);} ).length === 0 ? "":
           studentevents.data.listStudentEvents.items.filter( function(item1){return (item1.eventcode === item.eventcode);} )[0].studentid         
       } 
     });
-    console.log(parsed1);
-
+    //console.log(parsed1);
+    
+    // check
     var parsed = parsed1.map(function (item) {
       return {
           eventcode: item.eventcode,
@@ -79,14 +84,15 @@ class AdminEvents extends PureComponent {
 
     });    
 
-     console.log("parsed called");
-    parsed = parsed.sort((a, b) => a.eventname > b.eventname  ? 1 : -1 );
+     //console.log("parsed called");
+    //parsed = parsed.sort((a, b) => a.eventname > b.eventname  ? 1 : -1 );
+    parsed = parsed.sort((a, b) => a.eventcode.substring(3, 8) < b.eventcode.substring(3, 8)  ? 1 : -1 );
 
     this.setState({adminevents: parsed});
-    console.log(this.state.adminevents);
+    //console.log(this.state.adminevents);
 
 
-    console.log(parsed);
+    //console.log(parsed);
  
   }
 
@@ -98,10 +104,17 @@ class AdminEvents extends PureComponent {
 
  renderAdminEvents()
  {
+  if(this.state.admineventsupdated)
+  {
+    console.log("admin events updated");
+    this.getAdminEvents();
+  }
+
   return (
+    // displays all the events, codes, point values, and students that claimed the code
     <div className="adminevents"> 
       <br/>
-      <EdvStyles.Title> My Events</EdvStyles.Title>
+      <EdvStyles.Title> Generated Codes</EdvStyles.Title>
       <table class="mytable">
         <thead>
           <tr>
@@ -111,7 +124,7 @@ class AdminEvents extends PureComponent {
             <th>Claimed By</th> 
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {this.state.adminevents.map((Event, index) => {
             return (
               <tr key={Event.eventcode}>

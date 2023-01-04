@@ -2,8 +2,8 @@ import {Auth} from 'aws-amplify'
 import React, { PureComponent } from 'react'
 import FormAdmin from "./FormAdmin.js";
 import "./Administrator.css";
-import * as queries from '../../../graphql/queries'
-import * as mutations from '../../../graphql/mutations'
+import "../Student/Student.css";
+ 
 
 class EventCodes extends PureComponent {
     constructor(props) {
@@ -22,7 +22,7 @@ class EventCodes extends PureComponent {
     //console.log("Component did mount called");
    
   }
-
+  // enters the user that the code has been claimed by
   async getUser() {
 
     let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
@@ -38,7 +38,7 @@ class EventCodes extends PureComponent {
  
 
   render() {
- 
+    // displays event name, event code, and point value
     return (
       <div className="eventcodes">
         

@@ -118,6 +118,7 @@ mm_dd_yyyy() {
             <h7><button className="quaterlyreportbutton" onClick={this.renderStandings}> Current Standings </button></h7>
             <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
             <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
+            <br/> <br/> <br/>
     <h3>Current standings as of {this.mm_dd_yyyy()}</h3>
     <table class="mytable"> 
         <thead>
@@ -128,7 +129,7 @@ mm_dd_yyyy() {
             <th>Total Points</th> 
           </tr>
         </thead>
-        <tbody>
+        <tbody-noborder>
           {this.state.studentspointstop5.map((Student, index) => {
             return (
               <tr key={Student.studentname}>
@@ -139,7 +140,7 @@ mm_dd_yyyy() {
               </tr>
             );
           })}
-        </tbody>
+        </tbody-noborder>
       </table>
     
       <br/><br/><br/>
@@ -164,7 +165,7 @@ mm_dd_yyyy() {
             <th>Total Points</th> 
           </tr>
         </thead>
-        <tbody>
+        <tbody-noborder>
           {this.state.studentspointstop5.map((Student, index) => {
             return (
               <tr key={Student.studentname}>
@@ -175,7 +176,7 @@ mm_dd_yyyy() {
               </tr>
             );
           })}
-        </tbody>
+        </tbody-noborder>
       </table>
     
       <br/><br/><br/>
@@ -189,7 +190,7 @@ mm_dd_yyyy() {
 
   renderStandings()
   {
-    console.log("in renderstandings")
+    //console.log("in renderstandings")
 
     if(typeof(this.state.studentspointstop5) === 'undefined' || this.state.studentspointstop5 === null)
     {
@@ -203,21 +204,22 @@ mm_dd_yyyy() {
     }
     else
     {
-      console.log(this.props.isadministrator);
+      //console.log(this.props.isadministrator);
       if(this.props.isadministrator)  
       {
-        console.log("in render admin")
+        //console.log("in render admin")
         return this.renderStandingsAdmin();
       }
       else
       {
-        console.log("in render student")
+        //console.log("in render student")
         return this.renderStandingsStudent();
       }
     
     }
   }
 
+  // gets and displays information from the database about all students, their point values, and grades
   renderQuarterlyReport()
   {
      return(      
@@ -225,7 +227,7 @@ mm_dd_yyyy() {
 
       <h7><button className="quaterlyreportbutton" onClick={this.onStandingsClick}> Current Standings </button></h7>
       <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
-      <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
+      <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7>  <br/> <br/> <br/>
 
        <h3>Quarter 4 2022 Report</h3>
        <table class="mytable">
@@ -255,6 +257,7 @@ mm_dd_yyyy() {
     
   }
 
+  // generates and displays 4 random winners
   renderRandomWinners()
   {
      return(      
@@ -262,7 +265,7 @@ mm_dd_yyyy() {
 
       <h7><button className="quaterlyreportbutton" onClick={this.onStandingsClick}> Current Standings </button></h7>
       <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
-      <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7> 
+      <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7>  <br/> <br/> <br/>
 
        <h3>Random Winners</h3>
        <table class="mytable">
@@ -273,7 +276,7 @@ mm_dd_yyyy() {
              <th>Total Points</th> 
            </tr>
          </thead>
-         <tbody>
+         <tbody-noborder>
            {this.state.randomwinners.map((Student, index) => {
              return (
                <tr key={Student.studentname}>
@@ -283,7 +286,7 @@ mm_dd_yyyy() {
                </tr>
              );
            })}
-         </tbody>
+         </tbody-noborder>
        </table>
       
        <br/><br/><br/>

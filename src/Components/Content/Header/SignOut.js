@@ -17,7 +17,7 @@ class SignOut extends PureComponent {
      .catch(err => console.log(err));
   }
 
-
+  // will sign out when sign out button is clicked
   render() {
       return (
 

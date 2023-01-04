@@ -13,7 +13,7 @@ class Welcome extends PureComponent {
 
      
     async componentDidMount() {
-
+        // includes user name in welcome message
         let mes = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
 
         //console.log(mes);

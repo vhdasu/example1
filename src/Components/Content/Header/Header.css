@@ -29,7 +29,7 @@
     top: 85px;
     left: 20px;
     height:110px;
-    width: 500px;
+    width: 350px;
      text-align: left;
     background-color:white;
     color: cadetblue;    
@@ -38,10 +38,10 @@
   }
   .home {
     position: absolute;
-    top: 120px;
+    top: 115px;
     left: 600px;
     height:100px;
-    width: 20px;
+    width: 500px;
      text-align: left;
     background-color:white;
     color: cadetblue;    
@@ -71,7 +71,7 @@
 
 .standingsmenu {
   position: absolute;
-  top: 120px;
+  top: 115px;
   left: 750px;
   height:100px;
   width: 500px;
@@ -82,7 +82,7 @@
 }
 .prizeinfomenu {
   position: absolute;
-  top: 120px;
+  top: 115px;
   left: 930px;
   height:100px;
   width: 500px;
@@ -106,7 +106,7 @@
 
 .helpcontactmenu {
   position: absolute;
-  top: 120px;
+  top: 115px;
   left: 1205px;
   height:100px;
   width: 500px;
@@ -127,8 +127,8 @@
 
 .signout {
   position: absolute;
-  top: 120px;
-  left: 1420px;
+  top: 115px;
+  left: 1390px;
   height:100px;
   width: 20px;
    text-align: left;

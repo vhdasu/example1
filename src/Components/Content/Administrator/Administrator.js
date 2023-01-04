@@ -14,7 +14,8 @@ class Administrator extends PureComponent {
 
       this.setState({
         userid: "",
-        user:""
+        user:"",
+        admineventsupdated:true
     })
  
     }
@@ -52,8 +53,8 @@ class Administrator extends PureComponent {
   {
     return (      
       <div className="administrator">
-        <GenerateCodes userid={this.state.userid}/>
-        <AdminEvents userid={this.state.userid}/> 
+        <GenerateCodes admineventsupdated = {this.state.admineventsupdated} userid={this.state.userid}/>
+        <AdminEvents admineventsupdated = {this.state.admineventsupdated} userid={this.state.userid}/>
       </div>
     );
   }

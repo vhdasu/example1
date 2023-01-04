@@ -1,24 +1,8 @@
 
 
-add Edventure logo next to Edventure text
-
-Style all components
-
-Hide report generation button for students
-
 Update admin list when new codes are generated
 
-Sort the admin event list
-
-table scroll
-
-Generate codes button pointer
-
 event code can be used multiple times
-
-
-
-add northcreek high school text and powered by, 
 
 
 

@@ -18,11 +18,12 @@ class StudentEvents extends PureComponent {
  
   }
 
+   // gets and displays previous student events, points, and code in a table
   renderStudentEvents()
   {
     return (
       <div className="studentevents"> 
-   
+       
         <h14> My Events</h14>
         <table class="mytable">
           <thead>
@@ -32,7 +33,7 @@ class StudentEvents extends PureComponent {
               <th>Points</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody-noborder>
             {this.props.events.map((Event, index) => {
               return (
                 <tr key={Event.eventcode}>
@@ -42,7 +43,7 @@ class StudentEvents extends PureComponent {
                 </tr>
               );
             })}
-          </tbody>
+          </tbody-noborder>
         </table>
       </div>
     );      

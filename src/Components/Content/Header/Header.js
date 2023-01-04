@@ -48,7 +48,7 @@ class Header extends PureComponent {
     this.setState({helpcontactbuttonclassname:"homebutton"});
     this.setState({signoutbuttonclassname:"homebutton"});
 
-
+    // highlights current page location
     if(activepage === "home")
     {
       this.setState({homebuttonclassname:"homebuttonhighlighted"});
@@ -81,56 +81,64 @@ class Header extends PureComponent {
     
   }
 
-
+  // displays page on screen
   renderPage()
   {
     var handleToUpdate = this.handleToUpdate;
 
+    // top menu content. Will display on every page.
     let topmenu = 
     [
      <EdventureLogo  message={this.props.message}/> ,
      <Home  homebuttonclassname = {this.state.homebuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="HOME"/>,
      <StandingsMenu standingsbuttonclassname = {this.state.standingsbuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="STANDINGS"/>,     
      <PrizeInfoMenu prizeinfobuttonclassname = {this.state.prizeinfobuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="PRIZE INFORMATION"/>,     
-     <HelpContactMenu helpcontactbuttonclassname = {this.state.helpcontactbuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="HELP/CONTACT"/>,
+     <HelpContactMenu helpcontactbuttonclassname = {this.state.helpcontactbuttonclassname} handleToUpdate = {handleToUpdate.bind(this)} message="SUPPORT"/>,
      <SignOut signoutbuttonclassname = {this.state.signoutbuttonclassname} message="SIGNOUT"/>, <Welcome/>
     ];
 
-    console.log(this.state.activepage);
+    //console.log(this.state.activepage);
 
     let wholepage = null;    
 
-
+    // if home page button is clicked, the homepage will display
      if(this.state.activepage === "home")
     {
-      console.log("in header:" + this.props.isadministrator);            
-
+      //console.log("in header:" + this.props.isadministrator);            
+     // if 'isadministrator' is true, will display Administrator homepage
       if (this.props.isadministrator)
       {
           wholepage =  [topmenu, <Administrator/>];
       }
+      // else, will display Student homepage
       else
       {
         wholepage =  [topmenu, <Student/>];
       }
     }
+    // will display standings page
     else if (this.state.activepage === "standings")
     {
       //console.log(this.state.activepage);
+
+      // if the user is an Administrator, a different page will be displayed including winner and report generators
       wholepage =  [topmenu, <Standings isadministrator = {this.props.isadministrator} />];      
     }
+    // will diplay help/contact page. This page is the same for both administrators and students
     else if (this.state.activepage === "helpcontact")
     {
       //console.log(this.state.activepage);
       wholepage =  [topmenu, <HelpContact/>];      
     }
+
+    // will display prize information. This page is the same for both the administrators and students
     else if (this.state.activepage === "prizeinfo")
     {
-      console.log(this.state.activepage);
+      //console.log(this.state.activepage);
       wholepage =  [topmenu, <PrizeInfo/>];      
     }
 
-
+    // returns page based on what the user wants
     return(
       <div className = "wholepage">
         {wholepage}           
@@ -142,10 +150,11 @@ class Header extends PureComponent {
      
       if(this.state === null)
       {
-          <h4>...</h4>
+          return <h24>...</h24>
       }
       else
       {
+ 
         return  this.renderPage();
       }
   }

@@ -16,7 +16,7 @@ class GenerateCodes extends PureComponent {
         this.getEventTypeString = this.getEventTypeString.bind(this);
     };
 
-  // list containing event names
+  // list containing event names and short forms
     eventList= 
     [
       ["Honor Society", "HON"],
@@ -73,16 +73,17 @@ async generateCodes() {
       
       let eventName = this.getEventName();
 
-      //console.log(eventcode);
-      //console.log(eventName)
-      // will insert the generated
-      this.insertEventCode(eventcode, eventName, points )
+      
+      // will insert the generated code
+      this.insertEventCode(eventcode, eventName, points )      
     }        
+
+    this.props.admineventsupdated = true;
   }
 
   async insertEventCode(code, name, points)
   {
-    console.log(this.state.userid);
+    //console.log(this.state.userid);
 
     let newevent = {
       adminid: this.state.userid,
@@ -103,7 +104,7 @@ async generateCodes() {
     //console.log(response);
   }
 
-
+ // random number generator for 3rd section of code
   getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }

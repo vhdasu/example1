@@ -77,6 +77,7 @@ class Student extends PureComponent {
   ////console.log("Got all events");
   ////console.log(allevents);
 
+  // returns all events that the student participated in
   let thisstudentevents = studentevents.data.listStudentEvents.items.filter( function(item){return (item.studentid === thisuserid);} );
   ////console.log(thisstudentevents);  
 
@@ -164,6 +165,7 @@ class Student extends PureComponent {
     };
   }
 
+  // content in the student homepage
   renderStudent()
   {
     return (

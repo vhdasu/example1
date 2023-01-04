@@ -8,6 +8,7 @@ class StudentAddEvent extends Component {
     this.formSubmit = this.formSubmit.bind(this);
   }
 
+  // checks if a student has already added a code in the database
   formSubmit(event) {
     event.preventDefault();
     const form = event.target;
@@ -15,14 +16,12 @@ class StudentAddEvent extends Component {
     this.props.addEvent(eventcode);
     form.reset();
   }
-
+// if the code is not already claimed, the event will be added
   render() {
     return (
       <form className = "studentaddevent" onSubmit={this.formSubmit}>        
         <h14>Add an event</h14><span/>
         <EdvStyles.Input  id="eventcode" type="text" defaultValue="" placeholder="Event Code..." /><span/>
-        {/* //<input border-radius = "25px" classname = "input" id="eventcode"  type="text" defaultValue="" placeholder="Event Code..." />   <span/> */}
-        {/* //<input type="submit" border-radius="25px" value="submit" /> */}
         <h7><button className="addeventbutton" onClick={() => this.formSubmit}> Submit </button></h7>
       </form>
     );
