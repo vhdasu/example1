@@ -22,7 +22,9 @@ class EventCodes extends PureComponent {
     //console.log("Component did mount called");
    
   }
+
   // enters the user that the code has been claimed by
+
   async getUser() {
 
     let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
@@ -38,7 +40,9 @@ class EventCodes extends PureComponent {
  
 
   render() {
-    // displays event name, event code, and point value
+
+    // displays event name, event code, and point value in a table
+
     return (
       <div className="eventcodes">
         

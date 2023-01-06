@@ -27,6 +27,7 @@ class Administrator extends PureComponent {
  
     }
 
+    // checks if user and password are valid and categorized as admin
     async getUserandId()
   {
 

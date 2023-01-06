@@ -34,6 +34,8 @@ class Student extends PureComponent {
     }
   }
 
+
+  // checks if user is a student
   async getUser() {
 
     let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
@@ -56,6 +58,7 @@ class Student extends PureComponent {
 
    });
 
+  // records user
   let user = await Auth.currentAuthenticatedUser().then(user => {return user.username;});
   ////console.log("User:");
   ////console.log(user);  
@@ -93,7 +96,9 @@ class Student extends PureComponent {
    //console.log("Got relevant events");
    //console.log(relevantevents);
 
-   this.setState({events: relevantevents});
+   //sort using timestamp
+   let parsedrelevantevents = relevantevents.sort((a, b) => a.eventcode.substring(4, 12) < b.eventcode.substring(4, 12)  ? 1 : -1 );
+   this.setState({events: parsedrelevantevents});
    ////console.log("Set events");
    ////console.log(this.state.events);
 
@@ -105,6 +110,7 @@ class Student extends PureComponent {
    ////console.log(relevantevents);
   }
  
+   // checks if the event code has already been taken
   async eventExists(eventcode)
   {
     let itemcount =  this.state.events.filter( function(item){return (item.eventcode === eventcode);}).length
@@ -112,6 +118,7 @@ class Student extends PureComponent {
     return itemcount !== 0
   }
 
+   // returns true if event code is valid
   async eventCodeValid(eventcode)
   {
     let itemcount =  this.state.allevents.filter( function(item){return (item.eventcode === eventcode);}).length

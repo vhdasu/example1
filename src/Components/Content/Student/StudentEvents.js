@@ -1,8 +1,6 @@
 import React, { PureComponent } from 'react'
 import "./Student.css";
-import "./TotalPoints";
-import * as queries from '../../../graphql/queries'
-import * as mutations from '../../../graphql/mutations'
+import "./TotalPoints"; 
 
 class StudentEvents extends PureComponent {
     constructor(props) {
@@ -45,6 +43,7 @@ class StudentEvents extends PureComponent {
             })}
           </tbody-noborder>
         </table>
+        <br/><br/><br/>
       </div>
     );      
   }

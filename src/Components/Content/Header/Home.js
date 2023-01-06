@@ -10,7 +10,7 @@ class Home extends PureComponent {
       }
   }
 
-
+  // displays home page
   render() {
 
     var handleToUpdate = this.props.handleToUpdate;

@@ -6,7 +6,7 @@ import {API} from 'aws-amplify'
 class Standings extends PureComponent {
   constructor(props) {
       super(props)
-
+     
       this.getTopStudents = this.getTopStudents.bind(this);
       this.renderQuarterlyReport = this.renderQuarterlyReport.bind(this);      
       this.renderStandings = this.renderStandings.bind(this);
@@ -27,6 +27,7 @@ class Standings extends PureComponent {
     this.getTopStudents()     
   }
 
+  
   async getTopStudents()
   {
     //get all student events
@@ -51,7 +52,8 @@ class Standings extends PureComponent {
     let students = await API.graphql({
       query:queries.listStudents
     });
-
+    
+    // compares all students in database and returns top 5 students for the leaderboard
     var studentspoints = students.data.listStudents.items.map(function (item) {
       return {
         studentname: item.firstname + ' ' + item.lastname,
@@ -64,13 +66,14 @@ class Standings extends PureComponent {
     let studentspointstop5 = studentspoints.sort((a, b) => a.studentpoints < b.studentpoints ? 1 : -1).slice(0, 5);
    
 
-    //random winners
+    //random winners for each grade level
     let randomwinners = [];
     let random9 = Math.floor(Math.random() * studentspoints.filter(function(item1){return (item1.studentgrade === "9th Grade");}).length);
     let random10 = Math.floor(Math.random() * studentspoints.filter(function(item1){return (item1.studentgrade === "10th Grade");}).length);
     let random11 = Math.floor(Math.random() * studentspoints.filter(function(item1){return (item1.studentgrade === "11th Grade");}).length);
     let random12 = Math.floor(Math.random() * studentspoints.filter(function(item1){return (item1.studentgrade === "12th Grade");}).length);
 
+    // updates the random winners
     randomwinners.push(studentspoints.filter(function(item1){return (item1.studentgrade === "9th Grade");})[random9]);
     randomwinners.push(studentspoints.filter(function(item1){return (item1.studentgrade === "10th Grade");})[random10]);
     randomwinners.push(studentspoints.filter(function(item1){return (item1.studentgrade === "11th Grade");})[random11]);
@@ -89,7 +92,7 @@ class Standings extends PureComponent {
   }
 
  
-
+// date of the standings
 mm_dd_yyyy() {
   function twoDigit(n) { return (n < 10 ? '0' : '') + n; }
 
@@ -97,6 +100,7 @@ mm_dd_yyyy() {
   return '  ' + twoDigit(now.getMonth() + 1) + '/' + twoDigit(now.getDate()) + '/' + now.getFullYear();
 }
 
+// generates page based on what the user clicks
  onStandingsClick()
  {
     this.setState({reporttype:"standings"})
@@ -111,6 +115,7 @@ mm_dd_yyyy() {
  }
   
 
+ // leaderboard display on admin page with quarter report generation and random winner generation
  renderStandingsAdmin()
  {
   return(
@@ -150,6 +155,7 @@ mm_dd_yyyy() {
   );
  }
 
+ // leaderboard on student page
  renderStandingsStudent()
  {
   return(
@@ -229,7 +235,7 @@ mm_dd_yyyy() {
       <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onQuaterlyReportClick}> Generate Quarterly Report </button></h7>
       <span/><span/><h7><button className="quaterlyreportbutton" onClick={this.onRandomWinnersClick}> Generate Random Winners </button></h7>  <br/> <br/> <br/>
 
-       <h3>Quarter 4 2022 Report</h3>
+       <h3>Q4 2022 Report</h3>
        <table class="mytable">
          <thead>
            <tr>

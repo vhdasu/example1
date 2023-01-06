@@ -8,7 +8,7 @@ class HelpContactMenu extends PureComponent {
  
   }
 
-  
+  // displays help contact page
   render() {
 
     var handleToUpdate = this.props.handleToUpdate;

@@ -41,9 +41,6 @@ class HelpContact extends PureComponent {
       <span/><span/><h8> by another student</h8><br/><br/><br/>
 
       <br/><br/>
-      <span/><h9>For more information or additional help, please contact</h9><br/>
-      <span/><h8>Email: support@edventure.com</h8><br/>
-      <span/><h8>Phone: (432) 567-7890</h8><br/>
 
       </div>
     );

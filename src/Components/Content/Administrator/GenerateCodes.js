@@ -34,8 +34,8 @@ class GenerateCodes extends PureComponent {
 
   componentDidMount() {
     //console.log("Component did mount called");
-    //this.getUserandId()
-    ////console.log(this.state.userid)
+  
+   ////console.log(this.state.userid)
   }
 
 
@@ -55,10 +55,13 @@ async generateCodes() {
     //create 10 random codes
     // saves point value for a certain event
     let points = document.getElementById("Points").value;
+
     // saves the first three letters of the specific event
     let eventtype = this.getEventTypeString();
+
     // number of codes the user wishes to generate
     let numberofcodes = document.getElementById("numberofcodes").value;
+
     // date that will be included in the code
     let todaydate =  this.yyyymmdd();
 
@@ -105,9 +108,12 @@ async generateCodes() {
   }
 
  // random number generator for 3rd section of code
+
   getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
+
+  // gets the short form for the events
 
   getEventName()
   {

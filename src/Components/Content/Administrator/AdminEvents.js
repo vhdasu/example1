@@ -29,6 +29,7 @@ class AdminEvents extends PureComponent {
   async getAdminEvents()
   {
     // get all events that the admin generated
+    
     let allevents = await API.graphql({
       query:queries.listEvents
     });
@@ -46,6 +47,7 @@ class AdminEvents extends PureComponent {
 
 
     //get students that claimed these events
+
     let studentevents = await API.graphql({
       query:queries.listStudentEvents
     });
@@ -59,18 +61,22 @@ class AdminEvents extends PureComponent {
 
     var parsed1 = thisadminevents.map(function (item) {
       return {
+
          // gets the event name, code, and point value
+
           eventcode: item.eventcode,
           eventname: item.eventname,
           eventpoints: item.eventpoints,
+
           // finds the student that claimed a particular code
+
           studentclaimed: studentevents.data.listStudentEvents.items.filter( function(item1){return (item1.eventcode === item.eventcode);} ).length === 0 ? "":
           studentevents.data.listStudentEvents.items.filter( function(item1){return (item1.eventcode === item.eventcode);} )[0].studentid         
       } 
     });
     //console.log(parsed1);
     
-    // check
+
     var parsed = parsed1.map(function (item) {
       return {
           eventcode: item.eventcode,
@@ -84,14 +90,13 @@ class AdminEvents extends PureComponent {
 
     });    
 
-     //console.log("parsed called");
-    //parsed = parsed.sort((a, b) => a.eventname > b.eventname  ? 1 : -1 );
-    parsed = parsed.sort((a, b) => a.eventcode.substring(3, 8) < b.eventcode.substring(3, 8)  ? 1 : -1 );
+    console.log("parsed called");
+    console.log(parsed[0].eventcode.substring(4, 12));
+
+    parsed = parsed.sort((a, b) => a.eventcode.substring(4, 12) < b.eventcode.substring(4, 12)  ? 1 : -1 );
 
     this.setState({adminevents: parsed});
     //console.log(this.state.adminevents);
-
-
     //console.log(parsed);
  
   }
@@ -99,7 +104,7 @@ class AdminEvents extends PureComponent {
   async getStudentId()
   { 
     return "";
-    //return studentevents.data.listEvents.items.filter( function(item){return (item.eventcode === eventcode);} )[0].studentid;
+    
  }
 
  renderAdminEvents()
