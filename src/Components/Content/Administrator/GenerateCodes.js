@@ -62,50 +62,33 @@ async generateCodes() {
     // number of codes the user wishes to generate
     let numberofcodes = document.getElementById("numberofcodes").value;
 
-    // date that will be included in the code
-    let todaydate =  this.yyyymmdd();
+    var generateCodes = this.props.generateCodes;
+    generateCodes(eventtype, points, numberofcodes);
 
-
-    // generates the number of inputted codes
-    for (let i = 0; i < Number(numberofcodes); i++) 
-    {
-      // random number that is a part of the code
-      let randomNumber = this.getRndInteger(10000000, 99999999);
-
-      let eventcode = eventtype + "_" + todaydate + "_" + randomNumber;
-      
-      let eventName = this.getEventName();
-
-      
-      // will insert the generated code
-      this.insertEventCode(eventcode, eventName, points )      
-    }        
-
-    this.props.admineventsupdated = true;
   }
 
-  async insertEventCode(code, name, points)
-  {
-    //console.log(this.state.userid);
+  // async insertEventCode(code, name, points)
+  // {
+  //   //console.log(this.state.userid);
 
-    let newevent = {
-      adminid: this.state.userid,
-      eventcode: code,
-      eventname: name,
-      eventpoints: points
-    };
+  //   let newevent = {
+  //     adminid: this.state.userid,
+  //     eventcode: code,
+  //     eventname: name,
+  //     eventpoints: points
+  //   };
 
-    let response = await API.graphql({
-      query: mutations.createEvents,
-      variables: {
-        input: newevent
-      }
-    })
+  //   let response = await API.graphql({
+  //     query: mutations.createEvents,
+  //     variables: {
+  //       input: newevent
+  //     }
+  //   })
 
 
 
-    //console.log(response);
-  }
+  //   //console.log(response);
+  // }
 
  // random number generator for 3rd section of code
 
